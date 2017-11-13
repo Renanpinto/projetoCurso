@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- INCLUDE MENU -->
-        <%@include file="WEB-INF/jspf/includeMenu.jspf" %>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
         <!-- INCLUDE MENU END -->
         
         <div class="card border-secondary mb-3" style="max-width: 20rem;margin: 0 auto;margin-top: 100px;">
@@ -28,6 +28,20 @@
                     <input type="password" name="senha" class="form-control" id="loginSenha" placeholder="Digite sua senha">
                     <input type="password" name="senha2" class="form-control" placeholder="Digite novamente sua senha">
                   </div>
+                     <div class="form-group">
+                    <label for="loginUsuario">Nome</label>
+                    <input type="text" name="nome" class="form-control" id="loginUsuario" placeholder="Digite seu nome">
+                  </div>
+                     <div class="form-group">
+                    <label for="loginUsuario">Sobrenome</label>
+                    <input type="text" name="sobrenome" class="form-control" id="loginUsuario" placeholder="Digite seu sobrenome">
+                  </div>
+                     <div class="form-group">
+                    <label for="loginUsuario">Sexo</label>
+                    <input type="radio" name="usuario" class="form-control" id="loginUsuario">a
+                    <input type="radio" name="usuario" class="form-control" id="loginUsuario">b
+                  </div>
+                    
                   <button type="submit" value="cadastrar" class="btn btn-primary btn-lg" style="width: 100%">Cadastrar</button>
                 </form>
             </div>
@@ -35,7 +49,7 @@
         
         
         <!-- INCLUDE FOOTER -->
-        <%@include file="WEB-INF/jspf/includeFooter.jspf" %>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
         <!-- INCLUDE FOOTER END -->
     </body>
 </html>

@@ -35,6 +35,7 @@ public class Cadastrar extends HttpServlet{
 		String senha = request.getParameter("senha");
 		String senha2 = request.getParameter("senha2");
                 
+                
                 if(senha.equals(senha2)){
                     //BancoUsuarios.getUsuarios();
                     //BancoUsuarios.setUsuarios(usuario, senha);
