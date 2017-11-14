@@ -47,6 +47,8 @@ public class Cadastrar extends HttpServlet{
                     out.println("<script>alert('Senhas não correspondem!')</script>");
                     rd.include(request, response);
                 }
+                RequestDispatcher rd = request.getRequestDispatcher("telalogin.jsp");
+                
     }
     
 }

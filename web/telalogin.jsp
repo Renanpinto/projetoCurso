@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- INCLUDE MENU -->
-        <%@include file="WEB-INF/jspf/includeMenu.jspf" %>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
         <!-- INCLUDE MENU END -->
         
         <div class="card border-secondary mb-3" style="max-width: 20rem;margin: 0 auto;margin-top: 100px;">
@@ -35,7 +35,7 @@
         
         
         <!-- INCLUDE FOOTER -->
-        <%@include file="WEB-INF/jspf/includeFooter.jspf" %>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
         <!-- INCLUDE FOOTER END -->
     </body>
 </html>
