@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Python</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Iniciar Curso</a>
+                    <a href="cursos/python.jsp" class="btn btn-primary">Iniciar Curso</a>
                 </div>
             </div>
             <div class="row">
