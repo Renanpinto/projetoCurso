@@ -142,11 +142,11 @@
 
 
 
-                    <section class='task' data-task-type="video" data-task-id="10220" data-author-id="44993" data-course-code="ruby-on-rails-4-do-zero" data-section-number="14" data-domain="cursos.alura.com.br" data-hasFeedbackAnswer="false" data-url-prefix="/">
-                        <div class="task-body-header-actions">
-                            <a href="/course/ruby-on-rails-4-do-zero/task/10220/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
-                        </div>
-                    </section>
+                     <!-- INCLUDE MODULOS -->
+                        <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
+                        <!-- INCLUDE TROCAR CURSO -->
+                        <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
+
                 </main>
             </div>
         </div>

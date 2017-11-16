@@ -99,7 +99,7 @@
                         </nav>
 
                         <!-- INCLUDE MODULOS -->
-                        <%@include file="/WEB-INF/jspf/modulos.jspf" %>
+                        <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
                         <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
 
@@ -115,7 +115,6 @@
                     </h1>
                     <!-- INCLUDE VIDEO AULA -->
                     <%@include file="/WEB-INF/jspf/videoAula.jspf" %>
-                    <!-- INCLUDE VIDEO AULA -->
 
 
 
@@ -128,6 +127,8 @@
                 </main>
             </div>
         </div>
+        <!-- INCLUDE FOOTER -->v
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 
 </body>

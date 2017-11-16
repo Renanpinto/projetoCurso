@@ -24,7 +24,9 @@
             }
         %>
 
-      Meus Cursos
+      Meus Cursos 
+      <a href="cursos.jsp">Cursos</a>
+      
 
         <!-- INCLUDE FOOTER -->
         <%@include file="WEB-INF/jspf/footer.jspf" %>

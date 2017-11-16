@@ -96,7 +96,7 @@
                             </ul>
                         </nav>
                         <!-- INCLUDE MODULOS -->
-                        <%@include file="/WEB-INF/jspf/modulos.jspf" %>
+                        <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
                         <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
 

@@ -28,7 +28,7 @@
             }
         %>--%>
         <%
-            String url = "https://www.youtube.com/embed/Mp0vhMDI7fA";
+            String url = "https://www.youtube.com/embed/cYMruFKwqf0";
         %>
         <div class="container-fluid">
             <div class="row">
@@ -37,10 +37,10 @@
 
                         <section class="task-menu-section">
                             <div class="task-menu-section-title">
-                                <span class="task-menu-section-title-number ">Aula  <strong>01</strong>
+                                <span class="task-menu-section-title-number ">Aula  <strong>07</strong>
                                     <span>de 10</span></span>
                                 <h3 class="task-menu-section-title-text">
-                                    Introdução
+                                    Primeiros programas
                                 </h3>
                             </div>
                         </section>
@@ -48,26 +48,35 @@
 
                             <ul class="nav nav-pills flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="1.jsp">
-                                        <span class="task-menu-nav-item-number">01</span>
+                                    <a class="nav-link" href="6.jsp">
+                                        <span class="task-menu-nav-item-number">06</span>
                                         <span class="task-menu-nav-item-title" title="Vídeo 1">
-                                            Para que serve o Python
+                                            Primeiro programa
                                         </span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="2.jsp">
-                                        <span class="task-menu-nav-item-number">02</span>
+                                    <a class="nav-link active" href="7.jsp">
+                                        <span class="task-menu-nav-item-number">07</span>
                                         <span class="task-menu-nav-item-title" title="Vídeo 2">
-                                            Instalando Python3
+                                            Introdução ao Swing e JavaFX
                                         </span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="3.jsp">
-                                        <span class="task-menu-nav-item-number">04</span>
+                                    <a class="nav-link" href="8.jsp">
+                                        <span class="task-menu-nav-item-number">08</span>
+                                        <span class="task-menu-nav-item-title" title="Vídeo 3">
+                                            Tipos primitivos
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="9.jsp">
+                                        <span class="task-menu-nav-item-number">09</span>
                                         <span class="task-menu-nav-item-title" title="Partials com locals">
                                             Exercício 1
                                         </span>
@@ -75,8 +84,8 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="4.jsp">
-                                        <span class="task-menu-nav-item-number">05</span>
+                                    <a class="nav-link" href="10.jsp">
+                                        <span class="task-menu-nav-item-number">10</span>
                                         <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
                                             Exercício 2
                                         </span>
@@ -87,7 +96,7 @@
                         </nav>
 
                         <!-- INCLUDE MODULOS -->
-                        <%@include file="/WEB-INF/jspf/moduloPython.jspf" %>
+                        <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
                         <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
 
@@ -98,25 +107,25 @@
                 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
 
                     <h1 class="task-body-header-title">
-                        <small>01</small>
-                        <span class="task-body-header-title-text"> História do JAVA</span>
+                        <small>07</small>
+                        <span class="task-body-header-title-text">Introdução ao Swing e JavaFX</span>
                     </h1>
                     <!-- INCLUDE VIDEO AULA -->
                     <%@include file="/WEB-INF/jspf/videoAula.jspf" %>
-                    <!-- INCLUDE VIDEO AULA -->
 
 
 
 
                     <section class="" >
                         <div >
-                            <a href="2.jsp" aria-hidden="true"">Próxima Atividade</a>
+                            <a href="8.jsp" aria-hidden="true">Próxima Atividade</a>
                         </div>
                     </section>
                 </main>
             </div>
         </div>
-</html>
+        <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 
 </body>
 </html>

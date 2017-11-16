@@ -37,7 +37,7 @@
 
                         <section class="task-menu-section">
                             <div class="task-menu-section-title">
-                                <span class="task-menu-section-title-number ">Aula  <strong>01</strong>
+                                <span class="task-menu-section-title-number ">Aula  <strong>04</strong>
                                     <span>de 10</span></span>
                                 <h3 class="task-menu-section-title-text">
                                     Introdução
@@ -95,7 +95,7 @@
                             </ul>
                         </nav>
                         <!-- INCLUDE MODULOS -->
-                        <%@include file="/WEB-INF/jspf/modulos.jspf" %>
+                        <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
                         <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
 
