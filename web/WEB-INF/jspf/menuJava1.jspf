@@ -1,50 +1,50 @@
 <nav class="task-menu-nav">
 
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link <%=page1%>" href="1.jsp">
-                                        <span class="task-menu-nav-item-number">01</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 1">
-                                            História do JAVA
-                                        </span>
-                                    </a>
-                                </li>
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link <%=page1%>" href="1.jsp">
+                <span class="task-menu-nav-item-number">01</span>
+                <span class="task-menu-nav-item-title" title="Vídeo 1">
+                    História do JAVA
+                </span>
+            </a>
+        </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link <%=page2%>" href="2.jsp">
-                                        <span class="task-menu-nav-item-number">02</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 2">
-                                            Como funciona
-                                        </span>
-                                    </a>
-                                </li>
+        <li class="nav-item">
+            <a class="nav-link <%=page2%>" href="2.jsp">
+                <span class="task-menu-nav-item-number">02</span>
+                <span class="task-menu-nav-item-title" title="Vídeo 2">
+                    Como funciona
+                </span>
+            </a>
+        </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link <%=page3%>" href="3.jsp">
-                                        <span class="task-menu-nav-item-number">03</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 3">
-                                            Instalando JDK
-                                        </span>
-                                    </a>
-                                </li>
+        <li class="nav-item">
+            <a class="nav-link <%=page3%>" href="3.jsp">
+                <span class="task-menu-nav-item-number">03</span>
+                <span class="task-menu-nav-item-title" title="Vídeo 3">
+                    Instalando JDK
+                </span>
+            </a>
+        </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link <%=page4%>" href="4.jsp">
-                                        <span class="task-menu-nav-item-number">04</span>
-                                        <span class="task-menu-nav-item-title" title="Partials com locals">
-                                            Apostila
-                                        </span>
-                                    </a>
-                                </li>
+        <li class="nav-item">
+            <a class="nav-link <%=page4%>" href="4.jsp">
+                <span class="task-menu-nav-item-number">04</span>
+                <span class="task-menu-nav-item-title" title="Partials com locals">
+                    Apostila
+                </span>
+            </a>
+        </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link <%=page5%>" href="5.jsp">
-                                        <span class="task-menu-nav-item-number">05</span>
-                                        <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
-                                            Exercício 2
-                                        </span>
-                                    </a>
-                                </li>                  
+        <li class="nav-item">
+            <a class="nav-link <%=page5%>" href="5.jsp">
+                <span class="task-menu-nav-item-number">05</span>
+                <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
+                    Exercício 2
+                </span>
+            </a>
+        </li>                  
 
-                            </ul>
-                        </nav>
+    </ul>
+</nav>

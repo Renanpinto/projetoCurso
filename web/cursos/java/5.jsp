@@ -4,6 +4,8 @@
     Author     : Renan
 --%>
 
+<%@page import="br.com.curso.web.Quiz"%>
+<%@page import="br.com.curso.web.Questao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -68,10 +70,52 @@
                         <span class="task-body-header-title-text"> Exercício 2</span>
                     </h1>
                     <div class="card" >
-                        Exercicio 2
+
+                        <%int i = 0;
+                            if (request.getParameter("finalizar") != null) {
+                                int acertos = 0;
+                                for (Questao q : Quiz.getQuestoes()) {
+                                    String resposta = request.getParameter(q.getPergunta());
+                                    if (resposta != null) {
+                                        if (resposta.equals(q.getResposta())) {
+                                            acertos++;
+                                        }
+                                    }
+                                }
+                                Quiz.quantidade++;
+                                Quiz.soma += (100.0 * ((double) acertos / 10.0));
+                                //BancoUsuarios.setNovaPontuacaoUsuario(String.valueOf(session.getAttribute("user")), acertos);
+
+                                response.sendRedirect(request.getContextPath() + "/home.jsp");
+                }%>
+
+                        <div class="container">
+                            <br/>
+                            <form>
+                                <%i = 0;%>
+                                <%for (Questao questao : Quiz.getQuestoes()) {
+                            i++;%>
+
+                                <div id="<%=i%>" >
+                                    <h4><%=questao.getPergunta()%></h4>
+                                    <input type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
+                                    <%=questao.getAlternativas()[0]%><br>
+                                    <input type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
+                                    <%=questao.getAlternativas()[1]%><br>
+                                    <input type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
+                                    <%=questao.getAlternativas()[2]%>
+
+                                </div>
+
+                                <%}%>
+
+                        </div>
+
+                        <br><br>
+                        <input type="hidden" name="usuarioTestado" value="<%=String.valueOf(session.getAttribute("user"))%>"/>
+                        <input type="submit" name="finalizar" value="Finalizar"> 
+                        </form>
                     </div>
-
-
 
 
                     <section class="" >
