@@ -104,7 +104,6 @@ public class Quiz {
         );
         questoes.add(decimaQuestao);
         
-        Collections.shuffle(questoes);
         return questoes;
         
     }

@@ -86,7 +86,6 @@
                                 Quiz.soma += (100.0 * ((double) acertos / 10.0));
                                 //BancoUsuarios.setNovaPontuacaoUsuario(String.valueOf(session.getAttribute("user")), acertos);
 
-                                response.sendRedirect(request.getContextPath() + "/home.jsp");
                 }%>
 
                         <div class="container">
@@ -116,6 +115,35 @@
                         <input type="submit" name="finalizar" value="Finalizar"> 
                         </form>
                     </div>
+                        <%if (request.getParameter("finalizar")!=null){%>
+                        <form>
+                        <input type="submit" name="correcao" value="Respostas Corretas">
+                        </form>
+                        <%}%>
+                        <%if (request.getParameter("correcao")!=null){%>
+                        <div class="container">
+                            <br/>
+                            <h3 class="text-center">Respostas correta</h3>
+                            <form>
+                                <%i = 0;%>
+                                <%for (Questao questao : Quiz.getQuestoes()) {
+                            i++;%>
+
+                                <div id="<%=i%>" >
+                                    <h4><%=questao.getPergunta()%></h4>
+                                    <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
+                                    <%=questao.getAlternativas()[0]%><br>
+                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
+                                    <%=questao.getAlternativas()[1]%><br>
+                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
+                                    <%=questao.getAlternativas()[2]%>
+
+                                </div>
+
+                                <%}%>
+
+                        </div>
+                                <%}%>
 
 
                     <section class="" >

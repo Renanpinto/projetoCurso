@@ -68,7 +68,8 @@
                         <small>09</small>
                         <span class="task-body-header-title-text"> Apostila</span>
                     </h1>
-                    <h4>Python Básico: Operadores - aritméticos</h4>
+                    <br/>
+                    <h3>Python Básico: Operadores - aritméticos</h3>
                     <div class="card">>> 7 + 3 # adição
                     <p>10
                     <p>>>> 7 – 3 # subtração
