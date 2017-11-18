@@ -28,11 +28,12 @@
             }
         %>--%>
         <%
-            String url = "https://www.youtube.com/embed/Mp0vhMDI7fA";
-            String page1 = "active";
-            String page2 = "";
-            String page3 = "";
-            String page4 = "";
+            String page5 = "";
+            String page6 = "";
+            String page7 = "";
+            String page8 = "active";
+            String page9 = "";
+            String page10 = "";
         %>
         <div class="container-fluid">
             <div class="row">
@@ -41,16 +42,16 @@
 
                         <section class="task-menu-section">
                             <div class="task-menu-section-title">
-                                <span class="task-menu-section-title-number ">Aula  <strong>01</strong>
+                                <span class="task-menu-section-title-number ">Aula  <strong>08</strong>
                                     <span>de 10</span></span>
                                 <h3 class="task-menu-section-title-text">
-                                    Introdução
+                                    Primeiros Comandos
                                 </h3>
                             </div>
                         </section>
-
                         <!-- INCLUDE MENU LATERAL -->
-                         <%@include file="/WEB-INF/jspf/menuPython1.jspf" %>
+                        <%@include file="/WEB-INF/jspf/menuPython2.jspf" %>
+
                         <!-- INCLUDE MODULOS -->
                         <%@include file="/WEB-INF/jspf/moduloPython.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
@@ -59,23 +60,20 @@
                     </aside>
 
 
+
                 </nav>
                 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
 
                     <h1 class="task-body-header-title">
-                        <small>01</small>
-                        <span class="task-body-header-title-text"> Para que serve o Python</span>
+                        <small>08</small>
+                        <span class="task-body-header-title-text"> Apostila</span>
                     </h1>
-                    <!-- INCLUDE VIDEO AULA -->
-                    <%@include file="/WEB-INF/jspf/videoAula.jspf" %>
-                    <!-- INCLUDE VIDEO AULA -->
 
-
-
+                    
 
                     <section class="" >
                         <div >
-                            <a href="2.jsp" aria-hidden="true"">Próxima Atividade</a>
+                            <a href="9.jsp" aria-hidden="true"">Próxima Atividade</a>
                         </div>
                     </section>
                 </main>

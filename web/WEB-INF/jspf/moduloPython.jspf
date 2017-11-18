@@ -2,11 +2,11 @@
     <h2 class="task-menu-sections-title">
         Aulas
     </h2>
-    <select class="task-menu-sections-select" onchange="location.href = '../../cursos/java/' + this.value + '.jsp';">
+    <select class="task-menu-sections-select" onchange="location.href = '../../cursos/python/' + this.value + '.jsp';">
 
         <option  >Escolha um modulo </option>
         <option value="1" >Introdução </option>
-        <option value="6" >Python</option>
+        <option value="5" >Python</option>
 
     </select>
 </section>

@@ -48,7 +48,7 @@
 
                             <ul class="nav nav-pills flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="1.jsp">
+                                    <a class="nav-link active" href="python/1.jsp">
                                         <span class="task-menu-nav-item-number">01</span>
                                         <span class="task-menu-nav-item-title" title="Vídeo 1">
                                             Para que serve o Python

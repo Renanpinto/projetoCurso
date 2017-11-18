@@ -29,6 +29,10 @@
         %>--%>
         <%
             String url = "https://www.youtube.com/embed/Mp0vhMDI7fA";
+            String page1 = "";
+            String page2 = "";
+            String page3 = "active";
+            String page4 = "";
         %>
         <div class="container-fluid">
             <div class="row">
@@ -37,55 +41,15 @@
 
                         <section class="task-menu-section">
                             <div class="task-menu-section-title">
-                                <span class="task-menu-section-title-number ">Aula  <strong>01</strong>
+                                <span class="task-menu-section-title-number ">Aula  <strong>03</strong>
                                     <span>de 10</span></span>
                                 <h3 class="task-menu-section-title-text">
                                     Introdução
                                 </h3>
                             </div>
                         </section>
-                        <nav class="task-menu-nav">
-
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="1.jsp">
-                                        <span class="task-menu-nav-item-number">01</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 1">
-                                            Para que serve o Python
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="2.jsp">
-                                        <span class="task-menu-nav-item-number">02</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 2">
-                                            Instalando Python3
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="3.jsp">
-                                        <span class="task-menu-nav-item-number">04</span>
-                                        <span class="task-menu-nav-item-title" title="Partials com locals">
-                                            Exercício 1
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="4.jsp">
-                                        <span class="task-menu-nav-item-number">05</span>
-                                        <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
-                                            Exercício 2
-                                        </span>
-                                    </a>
-                                </li>                  
-
-                            </ul>
-                        </nav>
-
+                        <!-- INCLUDE MENU LATERAL -->
+                        <%@include file="/WEB-INF/jspf/menuPython1.jspf" %>
                         <!-- INCLUDE MODULOS -->
                         <%@include file="/WEB-INF/jspf/moduloPython.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
