@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Curso - JAVA</title>
+        <title>Curso - Python</title>
 
         <!--INCLUDE CSS -->
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -73,7 +73,7 @@
 
 
                     <section class="" >
-                        <div >
+                        <div class="text-right">
                             <a href="../../cursos.jsp" aria-hidden="true"">Finalizar</a>
                         </div>
                     </section>

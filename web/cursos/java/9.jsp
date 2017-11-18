@@ -29,6 +29,11 @@
         %>--%>
         <%
             String url = "https://www.youtube.com/embed/ijXXaIYsVx4";
+            String page6 = "";
+            String page7 = "";
+            String page8 = "";
+            String page9 = "active";
+            String page10 = "";
         %>
         <div class="container-fluid">
             <div class="row">
@@ -44,57 +49,8 @@
                                 </h3>
                             </div>
                         </section>
-                        <nav class="task-menu-nav">
-
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="6.jsp">
-                                        <span class="task-menu-nav-item-number">06</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 1">
-                                            Primeiro programa
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="7.jsp">
-                                        <span class="task-menu-nav-item-number">07</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 2">
-                                            Introdução ao Swing e JavaFX
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="8.jsp">
-                                        <span class="task-menu-nav-item-number">08</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 3">
-                                            Tipos primitivos
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="9.jsp">
-                                        <span class="task-menu-nav-item-number">09</span>
-                                        <span class="task-menu-nav-item-title" title="Partials com locals">
-                                            Exercício 1
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="10.jsp">
-                                        <span class="task-menu-nav-item-number">10</span>
-                                        <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
-                                            Exercício 2
-                                        </span>
-                                    </a>
-                                </li>                  
-
-                            </ul>
-                        </nav>
-
+                        <!-- INCLUDE MENU LATERAL -->
+                        <%@include file="/WEB-INF/jspf/menuJava2.jspf" %>
                         <!-- INCLUDE MODULOS -->
                         <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
@@ -107,16 +63,33 @@
                 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
 
                     <h1 class="task-body-header-title">
-                        <small>09</small>
-                        <span class="task-body-header-title-text"> Exercicio</span>
+                        <small></small>
+                        <span class="task-body-header-title-text"> </span>
                     </h1>
-                   
+                    <h3 class="text-center">
+                        Tipos primitivos e valores</h3>
+                    <br/>
+                    <p>Esses tipos de variáveis são tipos primitivos do Java: o valor que elas guardam são o real conteúdo da variável. Quando você utilizar o operador de atribuição = o valor será copiado.
+                        <br/>
+                    <p>int i = 5; // i recebe uma cópia do valor 5</p>
+                    <p>int j = i; // j recebe uma cópia do valor de i</p>
+                    <p>i = i + 1; // i vira 6, j continua 5</p>
+                    <p>Aqui, i fica com o valor de 6. Mas e j? Na segunda linha, j está valendo 5. Quando i passa a valer 6, será que j também muda de valor? Não, pois o valor de um tipo primitivo sempre é copiado.</p>
+                    <br/>
+                    <p>Apesar da linha 2 fazer j = i, a partir desse momento essas variáveis não tem relação nenhuma: o que acontece com uma, não reflete em nada com a outra.</p>
+                    <br/>    
+                    <h4>Outros tipos primitivos</h4>
+                    <br/>
+                    <p>Vimos aqui os tipos primitivos que mais aparecem. O Java tem outros, que são o byte, short, long e float.</p>
+
+                    <p>Cada tipo possui características especiais que, para um programador avançado, podem fazer muita diferença.
+                    </p>
 
 
 
 
                     <section class="" >
-                        <div >
+                        <div class="text-right">
                             <a href="10.jsp" aria-hidden="true">Próxima Atividade</a>
                         </div>
                     </section>

@@ -29,6 +29,11 @@
         %>--%>
         <%
             String url = "https://www.youtube.com/embed/v_ZCtgwbS3o";
+            String page1 = "";
+            String page2 = "";
+            String page3 = "";
+            String page4 = "";
+            String page5 = "active";
         %>
         <div class="container-fluid">
             <div class="row">
@@ -44,61 +49,13 @@
                                 </h3>
                             </div>
                         </section>
-                        <nav class="task-menu-nav">
-
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="1.jsp">
-                                        <span class="task-menu-nav-item-number">01</span>
-                                            <span class="task-menu-nav-item-title" title="Vídeo 1">
-                                                História do JAVA
-                                            </span>
-                                        </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="2.jsp">
-                                        <span class="task-menu-nav-item-number">02</span>
-                                            <span class="task-menu-nav-item-title" title="Vídeo 2">
-                                                Como funciona
-                                            </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="3.jsp">
-                                        <span class="task-menu-nav-item-number">03</span>
-                                            <span class="task-menu-nav-item-title" title="Vídeo 3">
-                                                Instalando JDK
-                                            </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="4.jsp">
-                                        <span class="task-menu-nav-item-number">04</span>
-                                            <span class="task-menu-nav-item-title" title="Partials com locals">
-                                                Exercício 1
-                                            </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="5.jsp">
-                                        <span class="task-menu-nav-item-number">05</span>
-                                            <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
-                                                Exercício 2
-                                            </span>
-                                    </a>
-                                </li>                  
-
-                            </ul>
-                        </nav>
+                        <!-- INCLUDE MENU LATERAL -->
+                        <%@include file="/WEB-INF/jspf/menuJava1.jspf" %>
                         <!-- INCLUDE MODULOS -->
                         <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
                         <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
-                            
+
 
                     </aside>
 
@@ -118,7 +75,7 @@
 
 
                     <section class="" >
-                        <div>
+                        <div class="text-right">
                             <a href="6.jsp" aria-hidden="true">Próxima Atividade</a>
                         </div>
                     </section>

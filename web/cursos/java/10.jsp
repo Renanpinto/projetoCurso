@@ -29,6 +29,11 @@
         %>--%>
         <%
             String url = "https://www.youtube.com/embed/ijXXaIYsVx4";
+            String page6 = "";
+            String page7 = "";
+            String page8 = "";
+            String page9 = "";
+            String page10 = "active";
         %>
         <div class="container-fluid">
             <div class="row">
@@ -44,57 +49,8 @@
                                 </h3>
                             </div>
                         </section>
-                        <nav class="task-menu-nav">
-
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="6.jsp">
-                                        <span class="task-menu-nav-item-number">06</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 1">
-                                            Primeiro programa
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="7.jsp">
-                                        <span class="task-menu-nav-item-number">07</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 2">
-                                            Introdução ao Swing e JavaFX
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="8.jsp">
-                                        <span class="task-menu-nav-item-number">08</span>
-                                        <span class="task-menu-nav-item-title" title="Vídeo 3">
-                                            Tipos primitivos
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="9.jsp">
-                                        <span class="task-menu-nav-item-number">09</span>
-                                        <span class="task-menu-nav-item-title" title="Partials com locals">
-                                            Exercício 1
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="10.jsp">
-                                        <span class="task-menu-nav-item-number">10</span>
-                                        <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
-                                            Exercício 2
-                                        </span>
-                                    </a>
-                                </li>                  
-
-                            </ul>
-                        </nav>
-
+                        <!-- INCLUDE MENU LATERAL -->
+                        <%@include file="/WEB-INF/jspf/menuJava2.jspf" %>
                         <!-- INCLUDE MODULOS -->
                         <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
@@ -115,8 +71,8 @@
 
 
                     <section class="" >
-                        <div >
-                            <a href="#" aria-hidden="true">Próxima Atividade</a>
+                        <div class="text-right">
+                            <a href="../../cursos.jsp" aria-hidden="true">Finalizar curso</a>
                         </div>
                     </section>
                 </main>
