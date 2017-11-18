@@ -14,7 +14,7 @@
         <title>Curso - Python</title>
 
         <!--INCLUDE CSS -->
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="../../css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- INCLUDE CSS END-->
     </head>
@@ -67,7 +67,7 @@
                         <small>04</small>
                         <span class="task-body-header-title-text"> EXERCICIO</span>
                     </h1>
-<div class="card" >
+                    <div class="card" >
 
                         <%int i = 0;
                             if (request.getParameter("finalizar") != null) {
@@ -84,14 +84,14 @@
                                 Quiz.soma += (100.0 * ((double) acertos / 10.0));
                                 //BancoUsuarios.setNovaPontuacaoUsuario(String.valueOf(session.getAttribute("user")), acertos);
 
-                }%>
+                            }%>
 
                         <div class="container">
                             <br/>
                             <form>
                                 <%i = 0;%>
                                 <%for (Questao questao : Quiz.getQuestoes()) {
-                            i++;%>
+                                        i++;%>
 
                                 <div id="<%=i%>" >
                                     <h4><%=questao.getPergunta()%></h4>
@@ -107,50 +107,52 @@
                                 <%}%>
 
                         </div>
-                                
+
 
                         <br><br>
                         <input type="hidden" name="usuarioTestado" value="<%=String.valueOf(session.getAttribute("user"))%>"/>
                         <input type="submit" name="finalizar" value="Finalizar"> 
                         </form>
                     </div>             
-                        <%if (request.getParameter("finalizar")!=null){%>
-                        <form>
+                    <%if (request.getParameter("finalizar") != null) {%>
+                    <form>
                         <input type="submit" name="correcao" value="Respostas Corretas">
-                        </form>
-                        <%}%>
-                        <%if (request.getParameter("correcao")!=null){%>
-                        <div class="container">
-                            <br/>
-                            <h3 class="text-center">Respostas correta</h3>
-                            <form>
-                                <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoes()) {
-                            i++;%>
+                    </form>
+                    <%}%>
+                    <%if (request.getParameter("correcao") != null) {%>
+                    <div class="container">
+                        <br/>
+                        <h3 class="text-center">Respostas correta</h3>
+                        <form>
+                            <%i = 0;%>
+                            <%for (Questao questao : Quiz.getQuestoes()) {
+                                        i++;%>
 
-                                <div id="<%=i%>" >
-                                    <h4><%=questao.getPergunta()%></h4>
-                                    <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
-                                    <%=questao.getAlternativas()[0]%><br>
-                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
-                                    <%=questao.getAlternativas()[1]%><br>
-                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
-                                    <%=questao.getAlternativas()[2]%>
+                            <div id="<%=i%>" >
+                                <h4><%=questao.getPergunta()%></h4>
+                                <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
+                                <%=questao.getAlternativas()[0]%><br>
+                                <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
+                                <%=questao.getAlternativas()[1]%><br>
+                                <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
+                                <%=questao.getAlternativas()[2]%>
 
-                                </div>
+                            </div>
 
-                                <%}%>
+                            <%}%>
 
-                        </div>
-                                <%}%>
-                        <section class="" >
-                       <div class="text-right">
+                    </div>
+                    <%}%>
+                    <section class="" >
+                        <div class="text-right">
                             <a href="5.jsp" aria-hidden="true"">Próxima Atividade</a>
                         </div>
                     </section>
                 </main>
             </div>
         </div>
+        <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 
 </body>

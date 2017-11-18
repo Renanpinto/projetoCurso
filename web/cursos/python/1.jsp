@@ -12,7 +12,7 @@
         <title>Curso - JAVA</title>
 
         <!--INCLUDE CSS -->
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="../../css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- INCLUDE CSS END-->
     </head>
@@ -50,7 +50,7 @@
                         </section>
 
                         <!-- INCLUDE MENU LATERAL -->
-                         <%@include file="/WEB-INF/jspf/menuPython1.jspf" %>
+                        <%@include file="/WEB-INF/jspf/menuPython1.jspf" %>
                         <!-- INCLUDE MODULOS -->
                         <%@include file="/WEB-INF/jspf/moduloPython.jspf" %>
                         <!-- INCLUDE TROCAR CURSO -->
@@ -81,6 +81,8 @@
                 </main>
             </div>
         </div>
+        <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 
 </body>

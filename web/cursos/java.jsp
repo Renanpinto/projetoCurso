@@ -103,20 +103,10 @@
                             <h2 class="task-menu-sections-title">
                                 Aulas
                             </h2>
-                            <select class="task-menu-sections-select" onchange="location.href = '/course/ruby-on-rails-4-do-zero/section/' + this.value;">
-
-                                <option value="1" >Introdução </option>
-
-                                <option value="2" >New Bundle Install</option>
-
-                                <option value="3" >Rotas e Controller</option>
-
-                                <option value="4" >Migrations </option>
-
-                                <option value="5" >Controller Order Limit </option>
+                            <!-- INCLUDE MODULOS -->
+                            <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
 
 
-                            </select>
                         </section>
                         <section class="task-menu-others">
                             <a href="../cursos.jsp" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
@@ -142,14 +132,14 @@
 
 
 
-                     <!-- INCLUDE MODULOS -->
-                        <%@include file="/WEB-INF/jspf/moduloJava.jspf" %>
-                        <!-- INCLUDE TROCAR CURSO -->
-                        <%@include file="/WEB-INF/jspf/trocarCurso.jspf" %>
+
+                    
 
                 </main>
             </div>
         </div>
+        <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 
 </body>

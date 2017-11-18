@@ -12,7 +12,7 @@
         <title>Curso - Python</title>
 
         <!--INCLUDE CSS -->
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="../../css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- INCLUDE CSS END-->
     </head>
@@ -71,56 +71,56 @@
                     <br/>
                     <h3>Python Básico: Operadores - aritméticos</h3>
                     <div class="card">>> 7 + 3 # adição
-                    <p>10
-                    <p>>>> 7 – 3 # subtração
-                    <p>4
-                    <p>>>> 8 % 3 # resto da divisão
-                    <p>2
-                    <p>>>> 8 / 3 # divisão inteira
-                    <p>2
-                    <p>>>> 8 / 3. # divisão em ponto flutuante
-                    <p>2.6666666666666665
-                    <p>>>> 8 * 3 # produto
-                    <p>24
-                    <p>>>> 8 ** 2 # exponenciação
-                    <p>64
+                        <p>10
+                        <p>>>> 7 – 3 # subtração
+                        <p>4
+                        <p>>>> 8 % 3 # resto da divisão
+                        <p>2
+                        <p>>>> 8 / 3 # divisão inteira
+                        <p>2
+                        <p>>>> 8 / 3. # divisão em ponto flutuante
+                        <p>2.6666666666666665
+                        <p>>>> 8 * 3 # produto
+                        <p>24
+                        <p>>>> 8 ** 2 # exponenciação
+                        <p>64
                     </div>
                     <br/>
                     <div class="row">
                         <div class="col-md-4">
-                    Strings
-                    <div class="card">
-                    <p>>>> a = 'bits'
-                    <p>>>> a * 2
-                    <p>'bitsbits'
-                    <p>>>> print '64 ' + a
-                    <p>64 bits
-                        <p>>>></p>
-                    </div>
+                            Strings
+                            <div class="card">
+                                <p>>>> a = 'bits'
+                                <p>>>> a * 2
+                                <p>'bitsbits'
+                                <p>>>> print '64 ' + a
+                                <p>64 bits
+                                <p>>>></p>
+                            </div>
                         </div>
-                    <div class="col-md-4">
-                    Listas
-                    <div class="card">
-                    <p>>>> a = [5, 6, 7, 8]
-                    <p>>>> b = [9, 10]
-                    <p>>>> print b * 2
-                    <p>[9, 10, 9, 10]
-                    <p>>>> print a + b
-                    <p>[5, 6, 7, 8, 9, 10]
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    Tuplas
-                    <div class="card">
-                    <p>>>> a = (2, 3, 4)
-                    <p>>>> print a + (5, 6)
-                    <p>(2, 3, 4, 5, 6)
-                    <p>>>></p>
-                    <p>>>></p>
-                    <p>>>></p>
-                    </div>
-                    </div>
+                        <div class="col-md-4">
+                            Listas
+                            <div class="card">
+                                <p>>>> a = [5, 6, 7, 8]
+                                <p>>>> b = [9, 10]
+                                <p>>>> print b * 2
+                                <p>[9, 10, 9, 10]
+                                <p>>>> print a + b
+                                <p>[5, 6, 7, 8, 9, 10]
+                            </div>
                         </div>
+                        <div class="col-md-4">
+                            Tuplas
+                            <div class="card">
+                                <p>>>> a = (2, 3, 4)
+                                <p>>>> print a + (5, 6)
+                                <p>(2, 3, 4, 5, 6)
+                                <p>>>></p>
+                                <p>>>></p>
+                                <p>>>></p>
+                            </div>
+                        </div>
+                    </div>
 
                     <section class="" >
                         <div class="text-right">
@@ -130,6 +130,8 @@
                 </main>
             </div>
         </div>
+        <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 
 </body>

@@ -116,6 +116,8 @@
                 </main>
             </div>
         </div>
+        <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 
 </body>
