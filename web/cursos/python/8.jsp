@@ -68,8 +68,61 @@
                         <small>08</small>
                         <span class="task-body-header-title-text"> Apostila</span>
                     </h1>
+                    <br/>
+                    <h3>Python Básico: O interpretador Python</h3>
+                    <p>Mantendo a tradição vamos fazer o “Hello World”</p>
+                    <div class="card"><p>>> a = “Hello”
+                        <p>>>> b = “World”
+                        <p>>>> print a, b
 
-                    
+                        <p>Hello World
+                    </div>
+                    <p>Observe que o comando print insere um espaço
+                        automaticamente entre as duas variáveis. O mesmo poderia
+                        ter sido feito com os comandos abaixo:
+                    <div class="card"><p>>>> a = “Hello World”
+                        <p>>>> print a
+                        <p>Hello World
+                        <p>>>> print “Hello World”
+                        <p>Hello World
+                        <p>>>> “Hello World”
+                        <p>'Hello World'
+                    </div>
+                    <br/>
+                    <h3>Criando um programa Python</h3>
+                    <p>O mesmo pode ser feito através da criação de um módulo
+                        (como são chamados os programas em Python). Em um
+                        editor de sua escolha escreva:</p>
+                    <div class="card"><p># Primeiro programa Python: hello.py
+                        <p>a = “Hello”</p>
+                        <p>b = “World”</p>
+                        <p>print a, b</p>
+                    </div>
+                    <p>Salve o programa com o nome hello.py e execute-o
+                        chamando o interpretador:</p>
+                    <div class="card"><p>$ python hello.py
+                        <p>Hello World</p>
+                        <p>$ _</p>
+                    </div>
+
+                    <p>O interpretador pode ser chamado automaticamente pelo
+                        sistema. Para isto acrescente o path dele no início programa
+                        e o torne executável:</p>
+                    <div class="card">
+                        <p>#!/usr/bin/python</p>
+                        <p># Primeiro programa Python: hello.py</p>
+                        <p>a = “Hello”</p>
+                        <p>b = “World”</p>
+                        <p>print a, b</p>
+                        <p>$ chmod +x hello.py</p>
+                        <p>$ ./hello.py</p>
+                        <p>Hello World</p>
+                        <p>$ _</p>
+                    </div>
+                    <p>Se tiver dúvidas quando a localização do interpretador
+                        Python, use o comando: which python</p>
+
+
 
                     <section class="" >
                         <div class="text-right">
