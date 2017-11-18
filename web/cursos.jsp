@@ -43,17 +43,17 @@
             </div>
             <div class="row">
                 <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="img/java.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/ruby.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">JAVA</h4>
+                        <h4 class="card-title">Ruby</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Iniciar Curso</a>
                     </div>
                 </div>
                 <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="img/java.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/rails.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">JAVA</h4>
+                        <h4 class="card-title">Ruby on Rails</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Iniciar Curso</a>
                     </div>
