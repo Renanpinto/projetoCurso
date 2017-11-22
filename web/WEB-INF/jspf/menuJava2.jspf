@@ -3,7 +3,7 @@
                             <ul class="nav nav-pills flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link <%=page6%>" href="6.jsp">
-                                        <span class="task-menu-nav-item-number">06</span>
+                                        <span class="task-menu-nav-item-number"><i class="fa fa-youtube-play" aria-hidden="true"></i> </span>
                                         <span class="task-menu-nav-item-title" title="Vídeo 1">
                                             Primeiro programa
                                         </span>
@@ -12,7 +12,7 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link <%=page7%>" href="7.jsp">
-                                        <span class="task-menu-nav-item-number">07</span>
+                                        <span class="task-menu-nav-item-number"><i class="fa fa-youtube-play" aria-hidden="true"></i> </span>
                                         <span class="task-menu-nav-item-title" title="Vídeo 2">
                                             Introdução ao Swing e JavaFX
                                         </span>
@@ -21,7 +21,7 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link <%=page8%>" href="8.jsp">
-                                        <span class="task-menu-nav-item-number">08</span>
+                                        <span class="task-menu-nav-item-number"><i class="fa fa-youtube-play" aria-hidden="true"></i> </span>
                                         <span class="task-menu-nav-item-title" title="Vídeo 3">
                                             Tipos primitivos
                                         </span>
@@ -30,7 +30,7 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link <%=page9%>" href="9.jsp">
-                                        <span class="task-menu-nav-item-number">09</span>
+                                         <span class="task-menu-nav-item-number"><i class="fa fa-book" aria-hidden="true"></i> </span>
                                         <span class="task-menu-nav-item-title" title="Partials com locals">
                                             Apostila
                                         </span>
@@ -39,9 +39,9 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link <%=page10%>" href="10.jsp">
-                                        <span class="task-menu-nav-item-number">10</span>
-                                        <span class="task-menu-nav-item-title" title="Criando uma partial para o formulário">
-                                            Exercício 2
+                                        <span class="task-menu-nav-item-number"><i class="fa fa-paint-brush" aria-hidden="true"></i> </span>
+                                        <span class="task-menu-nav-item-title" title="Exercicio">
+                                            Exercício 
                                         </span>
                                     </a>
                                 </li>                  
