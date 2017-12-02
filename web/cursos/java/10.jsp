@@ -146,7 +146,7 @@
 
                     <section class="" >
                         <div class="text-right">
-                            <a href="../../cursos.jsp" aria-hidden="true">Finalizar curso</a>
+                            <a class="btn btn-primary" href="../../cursos.jsp" aria-hidden="true">Finalizar curso</a>
                         </div>
                     </section>
                 </main>

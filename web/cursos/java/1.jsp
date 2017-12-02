@@ -76,13 +76,13 @@
 
                     <section class="" >
                         <div class="text-right">
-                            <a href="2.jsp" aria-hidden="true"">Próxima Atividade</a>
+                            <a class="btn btn-primary" href="2.jsp" aria-hidden="true"">Próxima Atividade</a>
                         </div>
                     </section>
                 </main>
             </div>
         </div>
-        <!-- INCLUDE FOOTER -->v
+        <!-- INCLUDE FOOTER -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </html>
 

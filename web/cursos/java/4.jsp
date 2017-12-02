@@ -102,7 +102,7 @@
 
                     <section class="" >
                         <div class="text-right">
-                            <a href="5.jsp" aria-hidden="true"">Próxima Atividade</a>
+                            <a class="btn btn-primary" href="5.jsp" aria-hidden="true"">Próxima Atividade</a>
                         </div>
                     </section>
                 </main>
