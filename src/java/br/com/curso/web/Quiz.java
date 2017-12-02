@@ -6,7 +6,8 @@ import java.util.Collections;
 public class Quiz {
     public static int quantidade;
     public static double soma;
-    private static ArrayList<Questao> questoes;
+    private static ArrayList<Questao> questoesJava;
+    private static ArrayList<Questao> questoesPython;
 
     
     public static double getMedia(){
@@ -14,7 +15,7 @@ public class Quiz {
     }
     
     
-    private static ArrayList<Questao> setQuestoes(){
+    private static ArrayList<Questao> setQuestoesJava(){
         
         Questao primeiraQuestao = new Questao(
         "O que é uma CLASSE?",
@@ -24,7 +25,7 @@ public class Quiz {
                   "Abstração das características relevantes de um grupo de coisas do mundo real",
                   "Abstração das características relevantes de situações reais do mundo."}
         );
-        questoes.add(primeiraQuestao);
+        questoesJava.add(primeiraQuestao);
        Questao segundaQuestao =  new Questao(
         "Um objeto pode representar:",
                 "Entidades físicas, conceituais e de software",
@@ -32,7 +33,7 @@ public class Quiz {
                     "Entidades físicas, conceituais e de software",
                     "Somente entidades conceituais (ex. empréstimo, processo)"}
         );
-        questoes.add(segundaQuestao);
+        questoesJava.add(segundaQuestao);
         
         Questao terceiraQuestao = new Questao(
         "Não é um dos princípios de orientação a objetos:",
@@ -41,7 +42,7 @@ public class Quiz {
                     "Qualquer coisa do mundo pode ser um objeto",
                     "Cada objeto é originado a partir de uma classe."}
         );
-        questoes.add(terceiraQuestao);
+        questoesJava.add(terceiraQuestao);
         
         Questao quartaQuestao = new Questao(
         "Um aluno chamado José Carlos do curso de Informática efetua matrícula nas disciplinas de Matemática, Física e Programação. Quais são os objetos da sentença?",
@@ -50,7 +51,7 @@ public class Quiz {
                     "José Carlos, Informática, Matemática, Física e Programação", 
                     "José Carlos, Informática e disciplinas"}
         );
-        questoes.add(quartaQuestao);
+        questoesJava.add(quartaQuestao);
         Questao quintaQuestao = new Questao(
         "Em relação aos atributos, é correto dizer que:",
                 "São propriedades de uma classe que definem os valores possíveis para as instâncias das propriedades",
@@ -58,7 +59,7 @@ public class Quiz {
                     "Uma classe deve ter ao menos um atributo",
                     "Atributos e operações são sinônimos"}
         );
-        questoes.add(quintaQuestao);
+        questoesJava.add(quintaQuestao);
      
         Questao sextaQuestao = new Questao(
         "Um dos criadores do termo \"Programação Orientada a Objetos\"",
@@ -67,7 +68,7 @@ public class Quiz {
                     "Alan Curtis Kay",
                     "Dahl Kay"}
         );
-        questoes.add(sextaQuestao);
+        questoesJava.add(sextaQuestao);
         
         Questao setimaQuestao = new Questao(
         "São atributos da Classe Professor:",
@@ -76,7 +77,7 @@ public class Quiz {
                     "nome, falar, cor, telefone.",
                     "nome, lecionar, CPF, RG."}
         );
-        questoes.add(setimaQuestao);
+        questoesJava.add(setimaQuestao);
         Questao oitavaQuestao = new Questao(
         "Marque a alternativa incorreta Em relação à definição de classe:",
                 "Classes não representam necessariamente um conjunto de objetos do mundo real, podem representar objetos de software",
@@ -84,7 +85,7 @@ public class Quiz {
                     "Classes não representam necessariamente um conjunto de objetos do mundo real, podem representar objetos de software",
                     "Uma classe serve como template(modelo) para se criar objetos."}
         );
-        questoes.add(oitavaQuestao);
+        questoesJava.add(oitavaQuestao);
         
         Questao nonaQuestao = new Questao(
         "Qual Linguagem não é orientada a objetos?",
@@ -93,7 +94,7 @@ public class Quiz {
                     "SMALLTALK",
                     "DELPHI"}
         );
-        questoes.add(nonaQuestao);
+        questoesJava.add(nonaQuestao);
         
         Questao decimaQuestao = new Questao(
         "O que é INSTÂNCIA?",
@@ -102,19 +103,76 @@ public class Quiz {
                     "O ato de a classe criar um novo objeto.",
                     "O ato de a classe criar uma nova classe."}
         );
-        questoes.add(decimaQuestao);
+        questoesJava.add(decimaQuestao);
         
-        return questoes;
+        return questoesJava;
         
     }
     
-    public static ArrayList<Questao> getQuestoes(){
-        if (questoes == null){
-            questoes = new ArrayList<>();
-            questoes = setQuestoes();
+    public static ArrayList<Questao> getQuestoesJava(){
+        if (questoesJava == null){
+            questoesJava = new ArrayList<>();
+            questoesJava = setQuestoesJava();
         }
-    return questoes;
+    return questoesJava;
     }
     
+    private static ArrayList<Questao> setQuestoesPython(){
+        
+        Questao primeiraQuestao = new Questao(
+        "Questao teste python",
+                "Abstração das características relevantes de um grupo de coisas do mundo real",
+                new String[] {"Abstração das características irrelevantes de um grupo de coisas do mundo real.",
+                    "Abstração das características elegantes de um grupo de coisas do mundo real.",
+                  "Abstração das características relevantes de um grupo de coisas do mundo real",
+                  "Abstração das características relevantes de situações reais do mundo."}
+        );
+        questoesPython.add(primeiraQuestao);
+       Questao segundaQuestao =  new Questao(
+        "Um objeto pode representar:",
+                "Entidades físicas, conceituais e de software",
+                new String[] {"Somente entidades físicas (ex. aluno, carro)", 
+                    "Entidades físicas, conceituais e de software",
+                    "Somente entidades conceituais (ex. empréstimo, processo)"}
+        );
+        questoesPython.add(segundaQuestao);
+        
+        Questao terceiraQuestao = new Questao(
+        "Não é um dos princípios de orientação a objetos:",
+                "Tarefas não são realizadas por objetos por meio de requisição de serviços.",
+                new String[] {"Tarefas não são realizadas por objetos por meio de requisição de serviços.", 
+                    "Qualquer coisa do mundo pode ser um objeto",
+                    "Cada objeto é originado a partir de uma classe."}
+        );
+        questoesPython.add(terceiraQuestao);
+        
+        Questao quartaQuestao = new Questao(
+        "Um aluno chamado José Carlos do curso de Informática efetua matrícula nas disciplinas de Matemática, Física e Programação. Quais são os objetos da sentença?",
+                "José Carlos, Informática, Matemática, Física e Programação",
+                new String[] {"Aluno, curso, matrícula e disciplina", 
+                    "José Carlos, Informática, Matemática, Física e Programação", 
+                    "José Carlos, Informática e disciplinas"}
+        );
+        questoesPython.add(quartaQuestao);
+        Questao quintaQuestao = new Questao(
+        "Em relação aos atributos, é correto dizer que:",
+                "São propriedades de uma classe que definem os valores possíveis para as instâncias das propriedades",
+                new String[] {"São propriedades de uma classe que definem os valores possíveis para as instâncias das propriedades",
+                    "Uma classe deve ter ao menos um atributo",
+                    "Atributos e operações são sinônimos"}
+        );
+        questoesPython.add(quintaQuestao);
+         
+        return questoesPython;
+        
+    }
+    
+    public static ArrayList<Questao> getQuestoesPython(){
+        if (questoesPython == null){
+            questoesPython = new ArrayList<>();
+            questoesPython = setQuestoesPython();
+        }
+    return questoesPython;
+    }
     
 }
