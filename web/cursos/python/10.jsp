@@ -68,7 +68,6 @@
                 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
 
                     <h1 class="task-body-header-title">
-                        <small>10</small>
                         <span class="task-body-header-title-text"> Exercicios</span>
                     </h1>
                     <div class="card" >
@@ -126,7 +125,7 @@
                     <%if (request.getParameter("correcao") != null) {%>
                     <div class="container">
                         <br/>
-                        <h3 class="text-center">Respostas correta</h3>
+                        <h3 class="text-center">Respostas corretas</h3>
                         <form>
                             <%i = 0;%>
                             <%for (Questao questao : Quiz.getQuestoesPython()) {
@@ -149,7 +148,7 @@
                     <%}%>
                     <section class="" >
                         <div class="text-right">
-                            <a href="../../cursos.jsp" aria-hidden="true"">Finalizar</a>
+                            <a class="btn btn-primary" href="../../cursos.jsp" aria-hidden="true"">Finalizar</a>
                         </div>
                     </section>
                 </main>

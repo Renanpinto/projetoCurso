@@ -67,7 +67,6 @@
                 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
 
                     <h1 class="task-body-header-title">
-                        <small>10</small>
                         <span class="task-body-header-title-text"> Exercicio</span>
                     </h1>
                     <div class="card">
