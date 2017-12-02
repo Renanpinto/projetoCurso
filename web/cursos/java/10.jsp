@@ -12,9 +12,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Curso - JAVA</title>
-        
+
         <!--INCLUDE CSS -->
-         <link href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="../../css/estilo.css">
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -71,10 +71,10 @@
                         <span class="task-body-header-title-text"> Exercicio</span>
                     </h1>
                     <div class="card">
-<%int i = 0;
+                        <%int i = 0;
                             if (request.getParameter("finalizar") != null) {
                                 int acertos = 0;
-                                for (Questao q : Quiz.getQuestoes()) {
+                                for (Questao q : Quiz.getQuestoesJava()) {
                                     String resposta = request.getParameter(q.getPergunta());
                                     if (resposta != null) {
                                         if (resposta.equals(q.getResposta())) {
@@ -86,14 +86,14 @@
                                 Quiz.soma += (100.0 * ((double) acertos / 10.0));
                                 //BancoUsuarios.setNovaPontuacaoUsuario(String.valueOf(session.getAttribute("user")), acertos);
 
-                }%>
+    }%>
 
                         <div class="container">
                             <br/>
                             <form>
                                 <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoes()) {
-                            i++;%>
+                                <%for (Questao questao : Quiz.getQuestoesJava()) {
+                                        i++;%>
 
                                 <div id="<%=i%>" >
                                     <h4><%=questao.getPergunta()%></h4>
@@ -115,37 +115,37 @@
                         <input type="submit" name="finalizar" value="Finalizar"> 
                         </form>
                     </div>
-                        <%if (request.getParameter("finalizar")!=null){%>
-                        <form>
+                    <%if (request.getParameter("finalizar") != null) {%>
+                    <form>
                         <input type="submit" name="correcao" value="Respostas Corretas">
-                        </form>
-                        <%}%>
-                        <%if (request.getParameter("correcao")!=null){%>
-                        <div class="container">
-                            <br/>
-                            <h3 class="text-center">Respostas correta</h3>
-                            <form>
-                                <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoes()) {
-                            i++;%>
+                    </form>
+                    <%}%>
+                    <%if (request.getParameter("correcao") != null) {%>
+                    <div class="container">
+                        <br/>
+                        <h3 class="text-center">Respostas correta</h3>
+                        <form>
+                            <%i = 0;%>
+                            <%for (Questao questao : Quiz.getQuestoesJava()) {
+                                        i++;%>
 
-                                <div id="<%=i%>" >
-                                    <h4><%=questao.getPergunta()%></h4>
-                                    <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
-                                    <%=questao.getAlternativas()[0]%><br>
-                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
-                                    <%=questao.getAlternativas()[1]%><br>
-                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
-                                    <%=questao.getAlternativas()[2]%>
+                            <div id="<%=i%>" >
+                                <h4><%=questao.getPergunta()%></h4>
+                                <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
+                                <%=questao.getAlternativas()[0]%><br>
+                                <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
+                                <%=questao.getAlternativas()[1]%><br>
+                                <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
+                                <%=questao.getAlternativas()[2]%>
 
-                                </div>
+                            </div>
 
-                                <%}%>
+                            <%}%>
 
-                        </div>
-                                <%}%>
-                        
-                        <section class="" >
+                    </div>
+                    <%}%>
+
+                    <section class="" >
                         <div class="text-right">
                             <a href="../../cursos.jsp" aria-hidden="true">Finalizar curso</a>
                         </div>

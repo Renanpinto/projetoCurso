@@ -76,7 +76,7 @@
                         <%int i = 0;
                             if (request.getParameter("finalizar") != null) {
                                 int acertos = 0;
-                                for (Questao q : Quiz.getQuestoes()) {
+                                for (Questao q : Quiz.getQuestoesJava()) {
                                     String resposta = request.getParameter(q.getPergunta());
                                     if (resposta != null) {
                                         if (resposta.equals(q.getResposta())) {
@@ -94,7 +94,7 @@
                             <br/>
                             <form>
                                 <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoes()) {
+                                <%for (Questao questao : Quiz.getQuestoesJava()) {
                             i++;%>
 
                                 <div id="<%=i%>" >
@@ -128,7 +128,7 @@
                             <h3 class="text-center">Respostas correta</h3>
                             <form>
                                 <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoes()) {
+                                <%for (Questao questao : Quiz.getQuestoesJava()) {
                             i++;%>
 
                                 <div id="<%=i%>" >
