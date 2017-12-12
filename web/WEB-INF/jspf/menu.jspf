@@ -1,7 +1,22 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<a href="home.jsp">Home</a>
-<a href="usuario.jsp">Usuario</a>
-<a href="cursos.jsp">Cursos</a>
-<a href="Login.jsp">Login</a>
-<a href="Logout.jsp">Logout</a>
+<nav class="navbar navbar-nav"; style="color: #999999">
+    <div class="container">
+        <div class="navbar-header">
+            <img src="img/spy.png" width="50"/>
+        </div>
+
+
+
+        <div>
+            <ul class="nav navbar-header navbar-right">
+                <li> <a href="home.jsp">Home</a> </li>
+                <li> <a href="usuario.jsp">Usuario</a> </li>
+                <li> <a href="cursos.jsp">Cursos</a> </li>
+                <li> <a href="Login.jsp">Login</a> </li>
+                <li> <a href="Logout.jsp">Logout</a> </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+</nav>
