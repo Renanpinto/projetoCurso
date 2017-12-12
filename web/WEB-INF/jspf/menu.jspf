@@ -20,7 +20,7 @@
             <ul class="nav navbar-header navbar-right topmenu">
                 <%if(session.getAttribute("me.login")==null){%>
                 <li> <a class="topmenu" href="telalogin.jsp">Login</a> </li>
-                <li> <a class="topmenu" href="cadastrar.jsp">Cadastrar</a> </li>
+                <li> <a class="topmenu" href="cadastro.jsp">Cadastrar</a> </li>
                 <%}else{%>
                 <li> <form>
         Bem vindo, <%=session.getAttribute("me.name")%>

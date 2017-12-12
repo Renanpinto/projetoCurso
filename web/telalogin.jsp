@@ -7,12 +7,12 @@
         String login = request.getParameter("usuario");
         String pass = request.getParameter("senha");
         try{
-            Usuario u = Usuario.getUser(login, pass);
+            Usuario u = Usuario.getUsuario(login, pass);
             if(u==null){
                 loginErrorMessage = "Login e/ou senha não encontrados";
             }else{
                 session.setAttribute("me.id", u.getId());
-                session.setAttribute("me.name", u.getName());
+                session.setAttribute("me.name", u.getNome());
                 session.setAttribute("me.login", u.getLogin());
                 session.setAttribute("me.passwordHash", u.getPasswordHash());
                 response.sendRedirect(request.getContextPath()+"/cursos.jsp");
