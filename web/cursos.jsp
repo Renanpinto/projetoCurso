@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : cursos
     Created on : 08/11/2017, 19:48:42
     Author     : a
@@ -17,11 +17,7 @@
         <!-- INCLUDE CSS END-->
     </head>
     <body>
-        <a href="home.jsp">Home</a>
-        <a href="usuario.jsp">Usuario</a>
-        <a href="cursos.jsp">Cursos</a>
-        <a href="Login.jsp">Login</a>
-        <a href="Logout.jsp">Logout</a>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
 
         <div class="row">
             <div class="card" style="width: 20rem;">
@@ -30,7 +26,7 @@
                     <h4 class="card-title">JAVA</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="cursos/java.jsp" class="btn btn-primary">Iniciar Curso</a>
-                  
+
                 </div>
             </div>
             <div class="card" style="width: 20rem;">
@@ -60,5 +56,6 @@
                 </div>
             </div>
         </div>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

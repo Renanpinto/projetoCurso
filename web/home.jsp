@@ -9,14 +9,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>!  Cursos MAGNATA ! </title>
     </head>
     <body>
-        <a href="home.jsp">Home</a>
-        <a href="usuario.jsp">Usuario</a>
-        <a href="cursos.jsp">Cursos</a>
-        <a href="Login.jsp">Login</a>
-        <a href="Logout.jsp">Logout</a>
+        <script> var repeat = 1
+            var title = document.title
+            var leng = title.length
+            var start = 1
+            function titlemove() {
+                titl = title.substring(start, leng) + title.substring(0, start)
+                document.title = titl
+                start++
+                if (start == leng + 1) {
+                    start = 0
+                    if (repeat == 0)
+                        return
+                }
+                setTimeout("titlemove()", 400)
+            }
+            if (document.title)
+                titlemove()
+        </script>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
+
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>

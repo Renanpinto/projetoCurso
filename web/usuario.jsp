@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : usuario
     Created on : 08/11/2017, 19:48:35
     Author     : a
@@ -16,7 +16,9 @@
         <a href="home.jsp">Home</a>
         <a href="usuario.jsp">Usuario</a>
         <a href="cursos.jsp">Cursos</a>
-         <a href="Login.jsp">Login</a>
+        <a href="Login.jsp">Login</a>
         <a href="Logout.jsp">Logout</a>
+
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
