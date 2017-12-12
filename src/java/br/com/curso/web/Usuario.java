@@ -73,9 +73,9 @@ public class Usuario {
     public static void addUsuario(String login, String password, String nome, String email, String telefone, String rgUsuario) throws Exception {
         String SQL = "INSERT INTO usuarios VALUES(default,?,?,?,?,?,?)";
         try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)) {
-            s.setString(1, login);
-            s.setString(2, password);
-            s.setString(3, nome);
+            s.setString(1, nome);
+            s.setString(2, login);
+            s.setString(3, password);
             s.setString(4, email);
             s.setString(5, telefone);
             s.setString(6, rgUsuario);

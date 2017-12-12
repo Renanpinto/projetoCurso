@@ -1,40 +1,6 @@
 <%@page import="br.com.curso.web.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%
-    String login = "";
-    String senha = "";
-    String senha2 = "";
-
-    String addUsuarioErrorMessage = null;
-    if (request.getParameter("cadastrar") != null) {
-        login = request.getParameter("usuario");
-        senha = request.getParameter("senha");
-        senha2 = request.getParameter("senha2");
-        String nome = request.getParameter("nome");
-        String email = request.getParameter("email");
-        String telefone = request.getParameter("telefone");
-        String rgUsuario = request.getParameter("rgUsuario");
-
-        if (senha.equals(senha2)) {
-
-            try {
-                Usuario.addUsuario(login, senha, nome, email, telefone, rgUsuario);
-
-                out.println("<script>alert('Cadastro Finalizado!')</script>");
-                response.sendRedirect("telalogin.jsp");
-
-            } catch (Exception e) {
-                addUsuarioErrorMessage = e.getMessage();
-                senha2 = "qqq";
-            }
-
-        } else {
-            response.sendRedirect("cadastro.jsp");;
-            out.println("<script>alert('Senhas não correspondem!')</script>");
-        }
-    }
-%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,12 +12,39 @@
         <!-- INCLUDE CSS END-->
     </head>
     <body>
+        <%
+
+            String addUsuarioErrorMessage = null;
+            if (request.getParameter("cadastrar") != null) {
+                String login = request.getParameter("usuario");
+                String senha = request.getParameter("senha");
+                String senha2 = request.getParameter("senha2");
+                String nome = request.getParameter("nome");
+                String email = request.getParameter("email");
+                String telefone = request.getParameter("telefone");
+                String rgUsuario = request.getParameter("rgUsuario");
+
+                if (senha.equals(senha2)) {
+                    try {
+                        Usuario.addUsuario(login, senha, nome, email, telefone, rgUsuario);
+                        out.println("<script>alert('Cadastro Finalizado!')</script>");
+                        response.sendRedirect("telalogin.jsp");
+                    } catch (Exception e) {
+                        addUsuarioErrorMessage = e.getMessage();
+                    }
+
+                } else {
+        //response.sendRedirect("cadastro.jsp");
+        out.println("<script>alert('Senhas não correspondem!')</script>");
+                }
+            }
+        %>
+
 
         <!-- INCLUDE MENU -->
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <!-- INCLUDE MENU END -->
         <%--<%if (addUsuarioErrorMessage != null) {%>--%>
-        <div style="color: red;">aaaaa<%=addUsuarioErrorMessage%>aaa</div>
         <%--<%}%>--%>
         <div class="card border-secondary mb-3" style="max-width: 43rem;margin: 0 auto;margin-top: 100px;">
             <div class="card-body">
@@ -91,32 +84,7 @@
             </div>
         </div>
         <div>
-            <%=login%>
-            <%=senha%>
-            <%=senha2%>
         </div>
-        <%--<table border="1">
-            <tr>
-                <th>Modelo</th>
-                <th>Cor</th>
-                <th>Placa</th>
-                <th>Entrada</th>
-                <th>Controle</th>
-            </tr>
-            <%try {%>
-            <%for (Usuario vs : Usuario.getListaUsuario()) {%>
-            <tr>
-                <td><%= vs.getNome()%></td>
-                <td><%= vs.getEmail()%></td>
-                <td><%= vs.getTelefone()%></td>
-                <td><%= vs.getRgUsuario()%></td>
-             
-            </tr>
-            <%}%>
-            <%} catch (Exception e) {%>
-            <div style="color: red;"><%=e.getMessage()%></div>
-            <%}%>
-        </table>--%>
         <!-- INCLUDE FOOTER -->
         <%@include file="WEB-INF/jspf/footer.jspf" %>
         <!-- INCLUDE FOOTER END -->
