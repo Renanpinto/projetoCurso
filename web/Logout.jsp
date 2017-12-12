@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : Logout
     Created on : 08/11/2017, 19:47:10
     Author     : a
@@ -16,7 +16,9 @@
         <a href="home.jsp">Home</a>
         <a href="usuario.jsp">Usuario</a>
         <a href="cursos.jsp">Cursos</a>
-         <a href="Login.jsp">Login</a>
+        <a href="Login.jsp">Login</a>
         <a href="Logout.jsp">Logout</a>
+
+
     </body>
 </html>
