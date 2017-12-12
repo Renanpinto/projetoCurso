@@ -4,6 +4,13 @@
 */
 
 /* MENU - Nav */
+.topmenu{
+    font-size: 0.8rem;
+    height: 1rem;
+}
+.topmenu .btn{
+    font-size: 0.8rem;
+}
 #menu{
     content: '';
     clear: both; 
