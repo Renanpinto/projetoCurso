@@ -4,6 +4,7 @@
     Author     : Renan
 --%>
 
+<%@page import="br.com.curso.web.Usuario"%>
 <%@page import="br.com.curso.web.Quiz"%>
 <%@page import="br.com.curso.web.Questao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,7 +15,7 @@
         <title>Curso - JAVA</title>
 
         <!--INCLUDE CSS -->
-         <link href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="../../css/estilo.css">
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -74,6 +75,8 @@
                     <div class="card" >
 
                         <%int i = 0;
+                            int id = (int) session.getAttribute("me.id");
+                            String erro = null;
                             if (request.getParameter("finalizar") != null) {
                                 int acertos = 0;
                                 for (Questao q : Quiz.getQuestoesJava()) {
@@ -85,14 +88,24 @@
                                     }
                                 }
                                 Quiz.notaJava1 = (10 * acertos);
-                }%>
+
+                                try {
+                                    Usuario.updateNota1(Quiz.notaJava1, id);
+                                } catch (Exception e) {
+                                    erro = e.getMessage();
+                                }
+                            }
+                        %>
 
                         <div class="container">
                             <br/>
                             <form>
+                                <%if (erro != null) {%>
+                                <div style="color: red;"><%=erro%></div>
+                                <%}%>
                                 <%i = 0;%>
                                 <%for (Questao questao : Quiz.getQuestoesJava()) {
-                            i++;%>
+                                        i++;%>
 
                                 <div id="<%=i%>" >
                                     <h4><%=questao.getPergunta()%></h4>
@@ -114,35 +127,35 @@
                         <input type="submit" name="finalizar" value="Responder"> 
                         </form>
                     </div>
-                        <%if (request.getParameter("finalizar")!=null){%>
-                        <form>
+                    <%if (request.getParameter("finalizar") != null) {%>
+                    <form>
                         <input type="submit" name="correcao" value="Respostas Corretas">
-                        </form>
-                        <%}%>
-                        <%if (request.getParameter("correcao")!=null){%>
-                        <div class="container">
-                            <br/>
-                            <h3 class="text-center">Respostas correta</h3>
-                            <form>
-                                <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoesJava()) {
-                            i++;%>
+                    </form>
+                    <%}%>
+                    <%if (request.getParameter("correcao") != null) {%>
+                    <div class="container">
+                        <br/>
+                        <h3 class="text-center">Respostas correta</h3>
+                        <form>
+                            <%i = 0;%>
+                            <%for (Questao questao : Quiz.getQuestoesJava()) {
+                                    i++;%>
 
-                                <div id="<%=i%>" >
-                                    <h4><%=questao.getPergunta()%></h4>
-                                    <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
-                                    <%=questao.getAlternativas()[0]%><br>
-                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
-                                    <%=questao.getAlternativas()[1]%><br>
-                                    <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
-                                    <%=questao.getAlternativas()[2]%>
+                            <div id="<%=i%>" >
+                                <h4><%=questao.getPergunta()%></h4>
+                                <input checked disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
+                                <%=questao.getAlternativas()[0]%><br>
+                                <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
+                                <%=questao.getAlternativas()[1]%><br>
+                                <input disabled type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
+                                <%=questao.getAlternativas()[2]%>
 
-                                </div>
+                            </div>
 
-                                <%}%>
+                            <%}%>
 
-                        </div>
-                                <%}%>
+                    </div>
+                    <%}%>
 
 
                     <section class="" >

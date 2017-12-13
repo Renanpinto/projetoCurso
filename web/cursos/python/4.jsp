@@ -4,6 +4,7 @@
     Author     : Renan
 --%>
 
+<%@page import="br.com.curso.web.Usuario"%>
 <%@page import="br.com.curso.web.Quiz"%>
 <%@page import="br.com.curso.web.Questao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -71,8 +72,9 @@
                     <div class="card" >
 
                         <%int i = 0;
+                        int acertos = 0;
+                        int id = (int)session.getAttribute("me.id");
                             if (request.getParameter("finalizar") != null) {
-                                int acertos = 0;
                                 for (Questao q : Quiz.getQuestoesPython()) {
                                     String resposta = request.getParameter(q.getPergunta());
                                     if (resposta != null) {
@@ -81,25 +83,26 @@
                                         }
                                     }
                                 }
-                                Quiz.notaPython1 += (20 * acertos);
-
+                                Quiz.notaPython1 = (20 * acertos);
+                                  Usuario.updateNota3(Quiz.notaPython1, id);
                             }%>
-
+<%=Quiz.notaPython1%>
+<%=acertos%>
                         <div class="container">
                             <br/>
                             <form>
                                 <%i = 0;%>
-                                <%for (Questao questao : Quiz.getQuestoesPython()) {
+                                <%for (Questao q : Quiz.getQuestoesPython()) {
                                         i++;%>
 
                                 <div id="<%=i%>" >
-                                    <h4><%=questao.getPergunta()%></h4>
-                                    <input type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[0]%>">
-                                    <%=questao.getAlternativas()[0]%><br>
-                                    <input type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[1]%>">
-                                    <%=questao.getAlternativas()[1]%><br>
-                                    <input type="radio" name="<%=questao.getPergunta()%>" value="<%=questao.getAlternativas()[2]%>">
-                                    <%=questao.getAlternativas()[2]%>
+                                    <h4><%=q.getPergunta()%></h4>
+                                    <input type="radio" name="<%=q.getPergunta()%>" value="<%=q.getAlternativas()[0]%>">
+                                    <%=q.getAlternativas()[0]%><br>
+                                    <input type="radio" name="<%=q.getPergunta()%>" value="<%=q.getAlternativas()[1]%>">
+                                    <%=q.getAlternativas()[1]%><br>
+                                    <input type="radio" name="<%=q.getPergunta()%>" value="<%=q.getAlternativas()[2]%>">
+                                    <%=q.getAlternativas()[2]%>
 
                                 </div>
 
@@ -125,7 +128,7 @@
                         <form>
                             <%i = 0;%>
                             <%for (Questao questao : Quiz.getQuestoesPython()) {
-                                        i++;%>
+                                    i++;%>
 
                             <div id="<%=i%>" >
                                 <h4><%=questao.getPergunta()%></h4>

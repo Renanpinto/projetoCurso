@@ -4,6 +4,7 @@
     Author     : Renan
 --%>
 
+<%@page import="br.com.curso.web.Usuario"%>
 <%@page import="br.com.curso.web.Quiz"%>
 <%@page import="br.com.curso.web.Questao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -73,6 +74,7 @@
                     <div class="card" >
 
                         <%int i = 0;
+                        int id = (int)session.getAttribute("me.id");
                             if (request.getParameter("finalizar") != null) {
                                 int acertos = 0;
                                 for (Questao q : Quiz.getQuestoesPython()) {
@@ -84,6 +86,7 @@
                                     }
                                 }
                                 Quiz.notaPython2 = (20 * acertos);
+                                Usuario.updateNota4(Quiz.notaPython2, id);
                             }%>
 
                         <div class="container">

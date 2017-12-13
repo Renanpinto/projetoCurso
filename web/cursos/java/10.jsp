@@ -4,6 +4,7 @@
     Author     : Renan
 --%>
 
+<%@page import="br.com.curso.web.Usuario"%>
 <%@page import="br.com.curso.web.Quiz"%>
 <%@page import="br.com.curso.web.Questao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -71,9 +72,10 @@
                     </h1>
                     <div class="card">
                         <%int i = 0;
-                        int acertos = 0;
+                            int id = (int) session.getAttribute("me.id");
+                            int acertos = 0;
                             if (request.getParameter("finalizar") != null) {
-                                
+
                                 for (Questao q : Quiz.getQuestoesJava()) {
                                     String resposta = request.getParameter(q.getPergunta());
                                     if (resposta != null) {
@@ -83,10 +85,8 @@
                                     }
                                 }
                                 Quiz.notaJava2 = (10 * acertos);
-
-    }%>
-    <%=Quiz.notaJava2%>
-    <%=acertos%>
+                                Usuario.updateNota2(Quiz.notaJava2, id);
+                            }%>
 
                         <div class="container">
                             <br/>
@@ -127,7 +127,7 @@
                         <form>
                             <%i = 0;%>
                             <%for (Questao questao : Quiz.getQuestoesJava()) {
-                                        i++;%>
+                                    i++;%>
 
                             <div id="<%=i%>" >
                                 <h4><%=questao.getPergunta()%></h4>

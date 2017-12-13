@@ -127,6 +127,7 @@ public class Quiz {
                     }
         );
         questoesPython.add(primeiraQuestao);
+        
         Questao segundaQuestao = new Questao(
                 "a = “Hello”; b = “World”; print a, b. Resultado:",
                 "Hello World",
@@ -137,20 +138,21 @@ public class Quiz {
         questoesPython.add(segundaQuestao);
 
         Questao terceiraQuestao = new Questao(
-                "a = 20*\"20\"; b = 20*20; a==b. Resultado:",
-                "False",
-                new String[]{"False",
-                    "True",
-                    "Error"}
+                ">>> test = 'This is just a simple string.'; test.count('r'); test.find('r'). Resultado:",
+                "2; 18",
+                new String[]{"2; 18",
+                    "2",
+                    "18"}
         );
         questoesPython.add(terceiraQuestao);
 
         Questao quartaQuestao = new Questao(
-                "\"tomate seco\".strip(\"otm\")",
-                "ate sec",
-                new String[]{"ate sec",
-                    "tomateseco",
-                    "tomate"}
+                "Resultado de >>> 8 / 3. é igual a:",
+                "2.666",
+                new String[]{"2.666",
+                    "2",
+                    "3",
+                    }
         );
         questoesPython.add(quartaQuestao);
         Questao quintaQuestao = new Questao(

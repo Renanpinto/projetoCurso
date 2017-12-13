@@ -17,8 +17,12 @@ public class Usuario {
     private String rgUsuario;
     private String login;
     private String passwordHash;
+    private double nota1;
+    private double nota2;
+    private double nota3;
+    private double nota4;
 
-    public Usuario(int id, String nome, String email, String telefone, String rgUsuario, String login, String passwordHash) {
+    public Usuario(int id, String nome, String email, String telefone, String rgUsuario, String login, String passwordHash, double nota1, double nota2, double nota3, double nota4) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -26,6 +30,10 @@ public class Usuario {
         this.rgUsuario = rgUsuario;
         this.login = login;
         this.passwordHash = passwordHash;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+        this.nota4 = nota4;
     }
 
     public static Usuario getUsuario(String login, String password) throws SQLException {
@@ -42,13 +50,17 @@ public class Usuario {
                     rs.getString("pass_hash"),
                     rs.getString("email"),
                     rs.getString("telefone"),
-                    rs.getString("rgUsuario"));
+                    rs.getString("rgUsuario"),
+                    rs.getDouble("nota1"),
+                    rs.getDouble("nota2"),
+                    rs.getDouble("nota3"),
+                    rs.getDouble("nota4"));
         }
         rs.close();
         s.close();
         return u;
     }
-    
+
     public static Usuario getUsuarioAtual(String id) throws SQLException {
         String SQL = "SELECT * FROM usuarios WHERE id=?";
         PreparedStatement s = Database.getConnection().prepareStatement(SQL);
@@ -62,14 +74,18 @@ public class Usuario {
                     rs.getString("pass_hash"),
                     rs.getString("email"),
                     rs.getString("telefone"),
-                    rs.getString("rgUsuario"));
+                    rs.getString("rgUsuario"),
+                    rs.getDouble("nota1"),
+                    rs.getDouble("nota2"),
+                    rs.getDouble("nota3"),
+                    rs.getDouble("nota4"));
         }
         rs.close();
         s.close();
         return u;
     }
-    
-     public static ArrayList<Usuario> getListaUsuario(int login) throws Exception{
+
+    public static ArrayList<Usuario> getListaUsuario(int login) throws Exception {
         ArrayList<Usuario> list = new ArrayList<>();
         String SQL = "SELECT * FROM usuarios WHERE id=?";
         PreparedStatement s = Database.getConnection().prepareStatement(SQL);
@@ -77,21 +93,25 @@ public class Usuario {
         ResultSet rs = s.executeQuery();
         Usuario u = null;
         if (rs.next()) {
-        u = new Usuario(
+            u = new Usuario(
                     rs.getInt("id"),
                     rs.getString("nome"),
                     rs.getString("login"),
                     rs.getString("pass_hash"),
                     rs.getString("email"),
                     rs.getString("telefone"),
-                    rs.getString("rgUsuario"));
+                    rs.getString("rgUsuario"),
+                    rs.getDouble("nota1"),
+                    rs.getDouble("nota2"),
+                    rs.getDouble("nota3"),
+                    rs.getDouble("nota4")
+            );
             list.add(u);
         }
         rs.close();
         s.close();
         return list;
     }
-  
 
     public static void addUsuario(String login, String password, String nome, String email, String telefone, String rgUsuario) throws Exception {
         String SQL = "INSERT INTO usuarios VALUES(default,?,?,?,?,?,?)";
@@ -103,6 +123,42 @@ public class Usuario {
             s.setString(5, telefone);
             s.setString(6, rgUsuario);
             s.execute();
+        }
+    }
+
+    public static void updateNota1(double notaJava1, int idUsuario) throws SQLException {
+        String SQL = "UPDATE usuarios SET nota1 = ? where id=?";
+        try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)){
+        s.setDouble(1, notaJava1);
+        s.setInt(2, idUsuario);
+        s.execute();
+        }
+    }
+    
+    public static void updateNota2(double notaJava2, int idUsuario) throws SQLException {
+        String SQL = "UPDATE usuarios SET nota2 = ? where id=?";
+        try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)){
+        s.setDouble(1, notaJava2);
+        s.setInt(2, idUsuario);
+        s.execute();
+        }
+    }
+    
+    public static void updateNota3(double notaPython1, int idUsuario) throws SQLException {
+        String SQL = "UPDATE usuarios SET nota3 = ? where id=?";
+        try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)){
+        s.setDouble(1, notaPython1);
+        s.setInt(2, idUsuario);
+        s.execute();
+        }
+    }
+    
+    public static void updateNota4(double notaPython2, int idUsuario) throws SQLException {
+        String SQL = "UPDATE usuarios SET nota4 = ? where id=?";
+        try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)){
+        s.setDouble(1, notaPython2);
+        s.setInt(2, idUsuario);
+        s.execute();
         }
     }
 
