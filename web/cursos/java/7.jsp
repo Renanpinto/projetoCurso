@@ -68,10 +68,9 @@
                         <small>07</small>
                         <span class="task-body-header-title-text">Introdução ao Swing e JavaFX</span>
                     </h1>
+
                     <!-- INCLUDE VIDEO AULA -->
                     <%@include file="/WEB-INF/jspf/videoAula.jspf" %>
-
-
 
 
                     <section class="" >

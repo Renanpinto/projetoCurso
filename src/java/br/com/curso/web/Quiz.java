@@ -138,9 +138,9 @@ public class Quiz {
         questoesPython.add(segundaQuestao);
 
         Questao terceiraQuestao = new Questao(
-                ">>> test = 'This is just a simple string.'; test.count('r'); test.find('r'). Resultado:",
-                "1; 25",
-                new String[]{"1; 25",
+                ">>> test = 'just a simple string.'; test.count('r'); test.find('r'). Resultado:",
+                "1; 16",
+                new String[]{"1; 16",
                     "2",
                     "18"}
         );

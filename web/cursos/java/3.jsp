@@ -28,11 +28,6 @@
         <!-- INCLUDE MENU END -->
 
 
-        <%--<%
-            if (session.getAttribute("user") == null) {
-                response.sendRedirect("../telalogin.jsp");
-            }
-        %>--%>
         <%
             String url = "https://www.youtube.com/embed/yWU5bm_pZzY";
             String page1 = "";
@@ -89,7 +84,7 @@
                 </main>
             </div>
         </div>
-</html>
-
+ <!-- INCLUDE FOOTER -->
+        <%@include file="/WEB-INF/jspf/footer.jspf" %>
 </body>
 </html>
