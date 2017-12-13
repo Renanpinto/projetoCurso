@@ -81,9 +81,7 @@
                                         }
                                     }
                                 }
-                                Quiz.quantidade++;
-                                Quiz.soma += (100.0 * ((double) acertos / 10.0));
-                                //BancoUsuarios.setNovaPontuacaoUsuario(String.valueOf(session.getAttribute("user")), acertos);
+                                Quiz.notaPython1 += (20 * acertos);
 
                             }%>
 
@@ -112,7 +110,7 @@
 
                         <br><br>
                         <input type="hidden" name="usuarioTestado" value="<%=String.valueOf(session.getAttribute("user"))%>"/>
-                        <input type="submit" name="finalizar" value="Finalizar"> 
+                        <input type="submit" name="finalizar" value="Responder"> 
                         </form>
                     </div>             
                     <%if (request.getParameter("finalizar") != null) {%>

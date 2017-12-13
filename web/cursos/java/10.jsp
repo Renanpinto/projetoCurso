@@ -71,8 +71,9 @@
                     </h1>
                     <div class="card">
                         <%int i = 0;
+                        int acertos = 0;
                             if (request.getParameter("finalizar") != null) {
-                                int acertos = 0;
+                                
                                 for (Questao q : Quiz.getQuestoesJava()) {
                                     String resposta = request.getParameter(q.getPergunta());
                                     if (resposta != null) {
@@ -81,11 +82,11 @@
                                         }
                                     }
                                 }
-                                Quiz.quantidade++;
-                                Quiz.soma += (100.0 * ((double) acertos / 10.0));
-                                //BancoUsuarios.setNovaPontuacaoUsuario(String.valueOf(session.getAttribute("user")), acertos);
+                                Quiz.notaJava2 = (10 * acertos);
 
     }%>
+    <%=Quiz.notaJava2%>
+    <%=acertos%>
 
                         <div class="container">
                             <br/>
@@ -111,7 +112,7 @@
 
                         <br><br>
                         <input type="hidden" name="usuarioTestado" value="<%=String.valueOf(session.getAttribute("user"))%>"/>
-                        <input type="submit" name="finalizar" value="Finalizar"> 
+                        <input type="submit" name="finalizar" value="Responder"> 
                         </form>
                     </div>
                     <%if (request.getParameter("finalizar") != null) {%>
@@ -122,7 +123,7 @@
                     <%if (request.getParameter("correcao") != null) {%>
                     <div class="container">
                         <br/>
-                        <h3 class="text-center">Respostas correta</h3>
+                        <h3 class="text-center">Respostas corretas</h3>
                         <form>
                             <%i = 0;%>
                             <%for (Questao questao : Quiz.getQuestoesJava()) {

@@ -4,10 +4,15 @@
     Author     : a
 --%>
 
+<%@page import="br.com.curso.web.Quiz"%>
 <%@page import="br.com.curso.web.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
+            if (session.getAttribute("me.id") == null) {
+                response.sendRedirect("telalogin.jsp");
+            }
+        
     String loginErrorMessage = null;
     //String login="";
     int id = (int)session.getAttribute("me.id");    
@@ -53,17 +58,16 @@
         <table class="table table-bordered table-hover" style="margin: 100px 10px;">
             <legend class="text-center">JAVA</legend>
             <tr>
-                <th>Nota 1:</th>
-                <th>Nota 2:</th>
+                <th>Nota 1: <%=Quiz.notaJava1%></th>
+                <th>Nota 2: <%=Quiz.notaJava2%></th>
             </tr>
         </table>
         <table class="table table-bordered table-hover" style="margin: 100px 10px;">
             <legend class="text-center">Python</legend>
 
             <tr>
-                <th>Nota 1: </th>
-                <th>Nota 2:</th>
-                <th>Nota 3:</th>
+                <th>Nota 1: <%=Quiz.notaPython1%></th>
+                <th>Nota 2: <%=Quiz.notaPython2%></th>
             </tr>
         </table>
     <%}%>

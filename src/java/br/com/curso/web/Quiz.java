@@ -5,14 +5,14 @@ import java.util.Collections;
 
 public class Quiz {
 
-    public static int quantidade;
-    public static double soma;
+    public static double notaJava1;
+    public static double notaJava2;
+    public static double notaPython1;
+    public static double notaPython2;
     private static ArrayList<Questao> questoesJava;
     private static ArrayList<Questao> questoesPython;
 
-    public static double getMedia() {
-        return (soma / (double) quantidade) * 10;
-    }
+    
 
     private static ArrayList<Questao> setQuestoesJava() {
 
