@@ -23,11 +23,6 @@
         <!-- INCLUDE MENU END -->
 
 
-        <%--<%
-            if (session.getAttribute("user") == null) {
-                response.sendRedirect("../telalogin.jsp");
-            }
-        %>--%>
         <%
             String url = "https://www.youtube.com/embed/Mp0vhMDI7fA";
             String page1 = "active";

@@ -1,12 +1,16 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <%  if (request.getParameter("logoff") != null) {
-        session.removeAttribute("me.id");
+        try{ session.removeAttribute("me.id");
         session.removeAttribute("me.name");
         session.removeAttribute("me.login");
         session.removeAttribute("me.passwordHash");
         response.sendRedirect(request.getContextPath() + "/home.jsp");
+    } catch(Exception e){
+        response.sendRedirect(request.getContextPath() + "/home.jsp");
+
     }
+}
 %>
 <nav class="navbar navbar-light bg-light ">
     <div class="container">
@@ -19,8 +23,8 @@
         <div>
             <ul class="nav navbar-header navbar-right topmenu">
                 <%if (session.getAttribute("me.login") == null) {%>
-                <li> <a class="topmenu" href="telalogin.jsp">Login</a> </li>
-                <li> <a class="topmenu" href="cadastro.jsp">Cadastrar</a> </li>
+                <li> <a class="topmenu" href="../../telalogin.jsp">Login</a> </li>
+                <li> <a class="topmenu" href="../../cadastro.jsp">Cadastrar</a> </li>
                     <%} else {%>
                 <li> <form>
                         Bem vindo, <%=session.getAttribute("me.name")%>

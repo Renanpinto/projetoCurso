@@ -6,6 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%  if (session.getAttribute("me.login") == null) {
+        response.sendRedirect(request.getContextPath() + "/home.jsp");
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,11 +28,6 @@
         <!-- INCLUDE MENU END -->
 
 
-        <%--<%
-            if (session.getAttribute("user") == null) {
-                response.sendRedirect("../telalogin.jsp");
-            }
-        %>--%>
         <%
             String url = "https://www.youtube.com/embed/v_ZCtgwbS3o";
             String page1 = "";

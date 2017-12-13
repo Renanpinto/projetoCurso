@@ -9,6 +9,10 @@
 <%@page import="br.com.curso.web.Questao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%  if (session.getAttribute("me.login") == null) {
+        response.sendRedirect(request.getContextPath() + "/home.jsp");
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,11 +31,6 @@
         <!-- INCLUDE MENU END -->
 
 
-        <%--<%
-            if (session.getAttribute("user") == null) {
-                response.sendRedirect("../telalogin.jsp");
-            }
-        %>--%>
         <%
             String url = "https://www.youtube.com/embed/v_ZCtgwbS3o";
             String page1 = "";
@@ -123,13 +122,12 @@
                         </div>
 
                         <br><br>
-                        <input type="hidden" name="usuarioTestado" value="<%=String.valueOf(session.getAttribute("user"))%>"/>
-                        <input type="submit" name="finalizar" value="Responder"> 
+                        <input class="btn btn-success" type="submit" name="finalizar" value="Responder"> 
                         </form>
                     </div>
                     <%if (request.getParameter("finalizar") != null) {%>
                     <form>
-                        <input type="submit" name="correcao" value="Respostas Corretas">
+                        <input class="btn btn-success" type="submit" name="correcao" value="Respostas Corretas">
                     </form>
                     <%}%>
                     <%if (request.getParameter("correcao") != null) {%>

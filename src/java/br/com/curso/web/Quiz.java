@@ -139,17 +139,17 @@ public class Quiz {
 
         Questao terceiraQuestao = new Questao(
                 ">>> test = 'This is just a simple string.'; test.count('r'); test.find('r'). Resultado:",
-                "2; 18",
-                new String[]{"2; 18",
+                "1; 25",
+                new String[]{"1; 25",
                     "2",
                     "18"}
         );
         questoesPython.add(terceiraQuestao);
 
         Questao quartaQuestao = new Questao(
-                "Resultado de >>> 8 / 3. é igual a:",
-                "2.666",
-                new String[]{"2.666",
+                "Resultado de >>> 8 / 2. é igual a:",
+                "4.0",
+                new String[]{"4.0",
                     "2",
                     "3",
                     }
