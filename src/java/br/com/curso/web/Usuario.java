@@ -49,20 +49,43 @@ public class Usuario {
         return u;
     }
     
-     public static ArrayList<Usuario> getListaUsuario() throws Exception{
-        ArrayList<Usuario> list = new ArrayList<>();
-        Statement s = Database.getConnection().createStatement();
-        ResultSet rs = s.executeQuery("SELECT * FROM users");
-        while(rs.next()){
-            Usuario vs = new Usuario(
-                    rs.getInt("id"),
-                    rs.getString("name"),
+    public static Usuario getUsuarioAtual(String id) throws SQLException {
+        String SQL = "SELECT * FROM usuarios WHERE id=?";
+        PreparedStatement s = Database.getConnection().prepareStatement(SQL);
+        s.setString(1, id);
+        ResultSet rs = s.executeQuery();
+        Usuario u = null;
+        if (rs.next()) {
+            u = new Usuario(rs.getInt("id"),
+                    rs.getString("nome"),
                     rs.getString("login"),
                     rs.getString("pass_hash"),
                     rs.getString("email"),
                     rs.getString("telefone"),
                     rs.getString("rgUsuario"));
-            list.add(vs);
+        }
+        rs.close();
+        s.close();
+        return u;
+    }
+    
+     public static ArrayList<Usuario> getListaUsuario(int login) throws Exception{
+        ArrayList<Usuario> list = new ArrayList<>();
+        String SQL = "SELECT * FROM usuarios WHERE id=?";
+        PreparedStatement s = Database.getConnection().prepareStatement(SQL);
+        s.setInt(1, login);
+        ResultSet rs = s.executeQuery();
+        Usuario u = null;
+        if (rs.next()) {
+        u = new Usuario(
+                    rs.getInt("id"),
+                    rs.getString("nome"),
+                    rs.getString("login"),
+                    rs.getString("pass_hash"),
+                    rs.getString("email"),
+                    rs.getString("telefone"),
+                    rs.getString("rgUsuario"));
+            list.add(u);
         }
         rs.close();
         s.close();
