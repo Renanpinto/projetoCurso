@@ -17,12 +17,11 @@
         <!-- INCLUDE CSS END-->
     </head>
     <body>
-
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <%@include file="WEB-INF/jspf/titulo.jspf" %>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis viverra risus, id blandit turpis. Curabitur laoreet finibus turpis sit amet hendrerit. Ut libero dolor, efficitur vel elit eget, sollicitudin mattis sapien. Duis eget eros sed purus tincidunt tristique at nec nisi. Cras posuere est diam, non finibus ipsum pharetra nec. Morbi et purus at dui dapibus tristique. Suspendisse tincidunt vehicula scelerisque. Duis ac bibendum neque, eu ornare massa. Mauris pretium, orci a commodo euismod, leo libero finibus ante, vitae lacinia augue odio ut arcu. In rutrum hendrerit arcu lacinia mattis.
-
-            Cras sodales vel justo sit amet euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit efficitur massa, tempus vehicula elit vestibulum in. Proin ac nisl ac nibh ullamcorper consectetur nec et leo. Cras iaculis lacinia felis. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus quis ligula non nibh sodales malesuada. </h2>
+        <div class="logo"> <img src="img/Logo.png" width="250" align="center"/></div>
+        <div class="logo"><h3>O Melhor Site de Cursos do Mercado !!</h3></div>
 
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>

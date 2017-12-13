@@ -10,6 +10,11 @@ body{
     background-attachment: fixed;
 }
 
+/* DIVS - HOME */
+.logo{
+    text-align: center;
+}
+
 
 /* MENU - Nav */
 .topmenu{
