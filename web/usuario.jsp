@@ -7,18 +7,14 @@
 <%@page import="br.com.curso.web.Quiz"%>
 <%@page import="br.com.curso.web.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%
-            if (session.getAttribute("me.id") == null) {
-                response.sendRedirect("telalogin.jsp");
-            }
-        
+           
     String loginErrorMessage = null;
-    //String login="";
     int id = (int)session.getAttribute("me.id");    
     try{
     
-   // Usuario u = Usuario.getUsuarioAtual(id);
     } catch(Exception e){
         loginErrorMessage = e.getMessage();
     }
@@ -38,6 +34,8 @@
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <div class="container">
         <%try{%>
+        <div class="row">
+            <div class="col">
         <table class="table table-bordered table-hover" style="margin: 100px 10px;">
         <tr>
             <th>Nome:</th>
@@ -50,32 +48,61 @@
         <tr>
             <td><%= p.getNome()%></td>
             <td><%= p.getRgUsuario()%></td>
-            <td><%= p.getTelefone()%></td>
+            <td><%= p.getPasswordHash()%></td>
             <td><%= p.getLogin()%></td>
             <td><%= p.getEmail()%></td>
         </tr>
         </table>
+            </div>
+        </div>
+        <div class="row notas">
+        <div class="col-md-6">
         <table class="table table-bordered table-hover" style="margin: 100px 10px;">
-            <legend class="text-center">JAVA</legend>
             <tr>
-                <th>Nota 1: <%=Quiz.notaJava1%></th>
-                <th>Nota 2: <%=Quiz.notaJava2%></th>
+                <th class="text-center" colspan="2">Java</th>
+            </tr>
+            <tr>
+                <td>Nota 1: <%=p.getNota1()%></td>
+                <td>Nota 2: <%=p.getNota2()%></td>
             </tr>
         </table>
+        </div>
+            <div class="col-md-6">
         <table class="table table-bordered table-hover" style="margin: 100px 10px;">
-            <legend class="text-center">Python</legend>
-
             <tr>
-                <th>Nota 1: <%=Quiz.notaPython1%></th>
-                <th>Nota 2: <%=Quiz.notaPython2%></th>
+                <th class="text-center" colspan="2">Python</th>
+            </tr>
+            <tr>
+                <td>Nota 1: <%=p.getNota3()%></td>
+                <td>Nota 2: <%=p.getNota4()%></td>
             </tr>
         </table>
+            </div>
+        </div>
     <%}%>
     <%}
                 catch(Exception e                
                     ){%>
     <div style="color: red;"><%=e.getMessage()%></div>
     <%}%>
+    
+    
+    <div class="text-center">
+        <form>
+        <input class="btn btn-danger" type="submit" name="delete" value="Deletar conta">
+        </form>
+    </div>
+    <%
+    if (request.getParameter("delete") != null) {
+        Usuario.deleteUsuario(id);
+        session.removeAttribute("me.id");
+        session.removeAttribute("me.name");
+        session.removeAttribute("me.login");
+        session.removeAttribute("me.passwordHash");
+        response.sendRedirect(request.getContextPath() + "/home.jsp");
+    }
+    %>
+    <br><br>
         </div>
     <%@include file="WEB-INF/jspf/footer.jspf" %>
 </body>

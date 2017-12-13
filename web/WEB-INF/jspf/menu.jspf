@@ -46,8 +46,9 @@
             <ul class="nav navbar-header navbar-right">
                 <li> <a href="home.jsp">Home</a> </li>
                 <li> <a href="cursos.jsp">Cursos</a> </li>
+                <%if (session.getAttribute("me.login") != null) {%>
                 <li> <a href="usuario.jsp">Usuario</a> </li>
-
+                        <%}%>
             </ul>
         </div>
     </div>

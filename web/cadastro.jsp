@@ -27,8 +27,9 @@
                 if (senha.equals(senha2)) {
                     try {
                         Usuario.addUsuario(login, senha, nome, email, telefone, rgUsuario);
-                        out.println("<script>alert('Cadastro Finalizado!')</script>");
+                        
                         response.sendRedirect("telalogin.jsp");
+                        out.println("<script>alert('Cadastro Finalizado!')</script>");
                     } catch (Exception e) {
                         addUsuarioErrorMessage = e.getMessage();
                     }
@@ -51,7 +52,10 @@
                 <h1 class="display-4 text-center">Cadastro</h1>
                 <form  method="post">
                     <!-- <form action="telalogin.jsp" method="post">-->
-
+<% if (addUsuarioErrorMessage != null){%>
+    <%=addUsuarioErrorMessage%>
+<%}
+%>
                     <div class="form-group">
                         <label for="nomeUsuario">Nome Completo</label>  
                         <input type="text" name="nome" class="form-control" id="nomeUsuario" placeholder="Digite seu nome">

@@ -86,8 +86,6 @@
                                 Quiz.notaPython1 = (20 * acertos);
                                   Usuario.updateNota3(Quiz.notaPython1, id);
                             }%>
-<%=Quiz.notaPython1%>
-<%=acertos%>
                         <div class="container">
                             <br/>
                             <form>
@@ -112,19 +110,18 @@
 
 
                         <br><br>
-                        <input type="hidden" name="usuarioTestado" value="<%=String.valueOf(session.getAttribute("user"))%>"/>
-                        <input type="submit" name="finalizar" value="Responder"> 
+                        <input class="btn btn-success" type="submit" name="finalizar" value="Responder"> 
                         </form>
                     </div>             
                     <%if (request.getParameter("finalizar") != null) {%>
                     <form>
-                        <input type="submit" name="correcao" value="Respostas Corretas">
+                        <input class="btn btn-primary" type="submit" name="correcao" value="Respostas Corretas">
                     </form>
                     <%}%>
                     <%if (request.getParameter("correcao") != null) {%>
                     <div class="container">
                         <br/>
-                        <h3 class="text-center">Respostas correta</h3>
+                        <h3 class="text-center">Respostas corretas</h3>
                         <form>
                             <%i = 0;%>
                             <%for (Questao questao : Quiz.getQuestoesPython()) {

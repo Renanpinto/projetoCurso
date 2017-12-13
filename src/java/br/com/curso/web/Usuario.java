@@ -114,7 +114,7 @@ public class Usuario {
     }
 
     public static void addUsuario(String login, String password, String nome, String email, String telefone, String rgUsuario) throws Exception {
-        String SQL = "INSERT INTO usuarios VALUES(default,?,?,?,?,?,?)";
+        String SQL = "INSERT INTO usuarios VALUES(default,?,?,?,?,?,?,null,null,null,null)";
         try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)) {
             s.setString(1, nome);
             s.setString(2, login);
@@ -134,6 +134,8 @@ public class Usuario {
         s.execute();
         }
     }
+    
+    
     
     public static void updateNota2(double notaJava2, int idUsuario) throws SQLException {
         String SQL = "UPDATE usuarios SET nota2 = ? where id=?";
@@ -159,6 +161,14 @@ public class Usuario {
         s.setDouble(1, notaPython2);
         s.setInt(2, idUsuario);
         s.execute();
+        }
+    }
+    
+    public static void deleteUsuario(int id) throws Exception {
+        String SQL = "DELETE FROM usuarios WHERE id = ?";
+        try (PreparedStatement s = Database.getConnection().prepareStatement(SQL)) {
+            s.setInt(1, id);
+            s.execute();
         }
     }
 
@@ -216,6 +226,38 @@ public class Usuario {
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
+    }
+
+    public double getNota1() {
+        return nota1;
+    }
+
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+
+    public double getNota2() {
+        return nota2;
+    }
+
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+
+    public double getNota3() {
+        return nota3;
+    }
+
+    public void setNota3(double nota3) {
+        this.nota3 = nota3;
+    }
+
+    public double getNota4() {
+        return nota4;
+    }
+
+    public void setNota4(double nota4) {
+        this.nota4 = nota4;
     }
 
 }
