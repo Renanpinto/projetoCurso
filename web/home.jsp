@@ -22,8 +22,16 @@
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <div class="logo"> <img src="img/Logo.png" width="250" align="center"/></div>
         <div class="sublogo"><h3>O Melhor Site de Cursos do Mercado !!</h3></div>
-
-        <span class="Imagem"><img src="img/capa.jpg" width="400"/> </span>
+        
+        <div class="card mb-3">
+            <img class="card-img-top" src="img/imagem_banner.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+                <h3 class="card-title">Conheça nossos cursos</h3>
+                <a href="cursos.jsp" class="btn btn-outline-info">Clique aqui</a>
+                <a href="cadastro.jsp" class="btn btn-outline-success">Cadastre-se</a>
+            </div>
+        </div>
+        <span class="Imagem"><img src="img/capa.jpg" width="400"/> </span><br>
         <span class="conteudo">Venha se tornar o melhor desenvolvedor aqui na SPY !</span>
         <div class="conteudo2">Empresa com 10 anos de mercado e credibilidade que só você conhece !! <br>
             Profissionais especializados e aulas 100% digitais !!<br>

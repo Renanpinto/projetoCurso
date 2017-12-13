@@ -35,7 +35,6 @@
                     }
 
                 } else {
-        //response.sendRedirect("cadastro.jsp");
         out.println("<script>alert('Senhas não correspondem!')</script>");
                 }
             }
@@ -58,28 +57,28 @@
 %>
                     <div class="form-group">
                         <label for="nomeUsuario">Nome Completo</label>  
-                        <input type="text" name="nome" class="form-control" id="nomeUsuario" placeholder="Digite seu nome">
+                        <input type="text" name="nome" class="form-control" id="nomeUsuario" placeholder="Digite seu nome" required>
                     </div>
                     <div class="form-group">
                         <label for="emailUsuario">Email</label>
-                        <input type="text" name="email" class="form-control" id="emailUsuario" placeholder="Digite seu email">
+                        <input type="text" name="email" class="form-control" id="emailUsuario" placeholder="Digite seu email" required>
                     </div>
                     <div class="form-group">
                         <label for="telefoneUsuario">Telefone</label>
-                        <input type="text" name="telefone" class="form-control" id="telefoneUsuario" placeholder="Digite seu sobrenome">
+                        <input type="text" name="telefone" class="form-control" id="telefoneUsuario" placeholder="Digite seu telefone" required>
                     </div>
                     <div class="form-group">
                         <label for="rgUsuario">RG</label>
-                        <input type="text" name="rgUsuario" class="form-control" id="rgUsuario" placeholder="Digite seu RG">
+                        <input type="text" name="rgUsuario" class="form-control" id="rgUsuario" placeholder="Digite seu RG" required>
                     </div>
                     <div class="form-group">
                         <label for="loginUsuario">Usuário</label>
-                        <input type="text" name="usuario" class="form-control" id="loginUsuario" placeholder="Digite seu nome de usuário">
+                        <input type="text" name="usuario" class="form-control" id="loginUsuario" placeholder="Digite seu nome de usuário" required>
                     </div>
                     <div class="form-group">
                         <label for="loginSenha">Senha</label>
-                        <input type="password" name="senha" class="form-control" id="loginSenha" placeholder="Digite sua senha">
-                        <input type="password" name="senha2" class="form-control" placeholder="Digite novamente sua senha">
+                        <input type="password" name="senha" class="form-control" id="loginSenha" placeholder="Digite sua senha" required>
+                        <input type="password" name="senha2" class="form-control" placeholder="Digite novamente sua senha" required>
                     </div>
 
 

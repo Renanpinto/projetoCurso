@@ -20,15 +20,11 @@
     </head>
     <body>
         <!-- INCLUDE MENU -->
-        <%@include file="/WEB-INF/jspf/menu.jspf" %>
+        <%@include file="/WEB-INF/jspf/topmenu.jspf" %>
         <!-- INCLUDE MENU END -->
 
 
-        <%--<%
-            if (session.getAttribute("user") == null) {
-                response.sendRedirect("../telalogin.jsp");
-            }
-        %>--%>
+        
         <%
             String url = "https://www.youtube.com/embed/sTX0UEplF54";
             String page1 = "active";
